@@ -1,7 +1,7 @@
 <?php
 /*
 $path = strtolower(trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
-if(preg_match('~^$~',$path,$m))  
+if(preg_match('~^$~',$path,$m))
 	$display_page = ("index");
 echo $display_page;
 */
@@ -15,9 +15,9 @@ echo $display_page;
 //if(preg_match('~^([a-z\-_/]*)'. "my_own" .'([a-z\-_/]*)$~',$path,$m))
 //echo $m[2];
 ?>
-	
-	
-	
+
+
+
 <script>
 
 $(document).ready(function() {
@@ -39,9 +39,9 @@ var index = 10001;
 			onFinish: function(){
 				$("#rightfolder").html('<div id="rightfolder2" ></div>');
 			},
-			
+
          });
-	 
+
 		$(".whitepaper").click(function(){
 			//alert("ASD");
 			if($(this).height() == 1200)
@@ -61,15 +61,15 @@ var index = 10001;
 				$("#goleft").fadeIn();
 				$("#goright").fadeIn();
 				$(this).addClass("viewing");
-				$("#lefthand").show();	
-				$("#righthand").show();				
+				$("#lefthand").show();
+				$("#righthand").show();
 			});
 		});
 
-		
+
 		$("#goleft").click(function(){
-				$("#lefthand").hide();	
-				$("#righthand").hide();			
+				$("#lefthand").hide();
+				$("#righthand").hide();
 			$(".viewing").animate({
 			left: "0px",
 			top: "0px",
@@ -83,20 +83,20 @@ var index = 10001;
 				$("#goright").fadeOut();
 				$(this).removeClass("viewing");
 				$("#goleft2").fadeIn();
-				$("#goright2").fadeIn();				
+				$("#goright2").fadeIn();
 				//$(this).css("z-index","10001");
 				$(this).next().addClass("topright");
 				$(".topleft").removeClass("topleft");
 				$(this).removeClass("topright");
 				$(this).addClass("topleft");
-			
-			});	
 
-			
-			
 			});
 
-		$("#goleft2").click(function(){			
+
+
+			});
+
+		$("#goleft2").click(function(){
 			$(".topright").css("z-index",index++);
 			$(".topright").animate({
 			left: "0px",
@@ -106,19 +106,19 @@ var index = 10001;
 			width:  "300px",
 			padding: "20px"
 			}, 500, function() {
-			// Animation complete.				
+			// Animation complete.
 				//$(this).css("z-index","10001");
 				$(this).next().addClass("topright");
 				$(".topleft").removeClass("topleft");
 				$(this).removeClass("topright");
 				$(this).addClass("topleft");
-				
-			});				
-			
+
+			});
+
 		});
 		$("#goright").click(function(){
-				$("#lefthand").hide();	
-				$("#righthand").hide();			
+				$("#lefthand").hide();
+				$("#righthand").hide();
 			$(".viewing").animate({
 			left: "420px",
 			top: "0px",
@@ -136,15 +136,15 @@ var index = 10001;
 				//$(this).removeClass("whitepaperL");
 				//$(this).addClass("whitepaperR");
 				$("#goleft2").fadeIn();
-				$("#goright2").fadeIn();					
+				$("#goright2").fadeIn();
 				//$(this).css("z-index","10001");
 				$(".topright").removeClass("topright");
 				$(this).removeClass("topleft");
 				$(this).addClass("topright");
 				$(this).prev().addClass("topleft");
-				
-			});					
-			});	
+
+			});
+			});
 		$("#goright2").click(function(){
 			//alert(2);
 			$(".topleft").css("z-index",index++);
@@ -156,20 +156,20 @@ var index = 10001;
 			width:  "300px",
 			padding: "20px"
 			}, 500, function() {
-			// Animation complete.				
+			// Animation complete.
 				//$(this).css("z-index","10001");
 				$(".topright").removeClass("topright");
 				$(this).removeClass("topleft");
 				$(this).addClass("topright");
 				$(this).prev().addClass("topleft");
-				
-			});				
+
+			});
 		});
-	
+
 
 		//$("#rightpannel").css("over-flow", "show");
 		//$("#fbicontainer").css("width", "1600px");
-	
+
 		//$("#fbicontainer").css("height", "1600px");
 });
 });
@@ -184,20 +184,20 @@ var index = 10001;
 $(document).ready(function() {
 	$("#desk").hide();
 	$("#mac").hide();
-	
+
 		setTimeout(function(){
 		$("#desk").fadeIn();
 		$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
-		},2000);	
+		},2000);
 		setTimeout(function(){
 		$("#mac").fadeIn();
-		},4000);	
+		},4000);
 });
 */
 </script>
 
 
-<div id="foldername" >
+<!-- <div id="foldername" >
 <span id="recordname">Ryan Dang </span>
 </div>
 
@@ -220,31 +220,31 @@ $(document).ready(function() {
 <span class="folded-corner"></span>
 	<div class="note">Reference Letter </div>
 	<img src="images/ref.png" alt="reference" width="100%" height="60%"/>
-	
+
 </div>
 <div class="whitepaper">
 <span class="folded-corner"></span>
 	<div class="note">Transcript </div>
 	<img src="images/transcript.jpg" alt="diploma" width="100%" height="60%"/>
-	
+
 </div>
 <div class="whitepaper">
 <span class="folded-corner"></span>
 	<div class="note">Certificate </div>
 	<img src="images/diploma.jpg" alt="diploma" width="100%" height="60%"/>
-	
+
 </div>
 <div class="whitepaper">
 <span class="folded-corner"></span>
 	<div class="note">Education(con't) </div>
 <b>Humber College</b><br/>
 Business Administration-Accounting Diploma<br/><br/>
-2006 - 2010 <br/>	
+2006 - 2010 <br/>
 </div>
 <div class="whitepaper">
 <span class="folded-corner"></span>
 	<div class="note">Education </div>
-	
+
 <b>Seneca College of Applied Arts and<br/> Technology</b><br/>
 Bachelor Software Development<br/><br/>
 
@@ -254,7 +254,7 @@ Grade: 3.6/4GPA<br/><br/>
 
 - Awarded Renewable Scholarship - Bachelor of Technology year 2013<br/>
 <br/><br/>
-	
+
 <b>Seneca College of Applied Arts and<br/> Technology</b><br/>
 Computer Programing Diploma<br/><br/>
 
@@ -270,7 +270,7 @@ Grade: 3.8/4GPA<br/><br/>
 	<div class="note">Works</div>
 <b>Web Developer</b><br/>
 Fivel Inc.<br/>
-December 2014 - present <br/><br/>	
+December 2014 - present <br/><br/>
 
 <b>Web Developer</b><br/>
 Traffic Duco Inc.<br/>
@@ -294,25 +294,25 @@ February 2008 - April 2008
 <div class="whitepaper">
 	<span class="folded-corner"></span>
 	<div class="note">Summary(con't) </div>
-	- A great team player. 
+	- A great team player.
 	<br/><br/>
-	- Always take the initiative.	
+	- Always take the initiative.
 	<br/><br/>
-	- Demonstrated solid knowledge in understanding modern 
+	- Demonstrated solid knowledge in understanding modern
 	user experiences in web world.
 	<br/><br/>
 	- Demonstrated technical excellence in software<br/> engineering throughout design, emplementation <br/>and testing.
-	
+
 
 </div>
 
 <div class="whitepaper topleft">
 	<div class="note">Summary </div>
-	
+
 
 	<span class="folded-corner"></span>
 - An enthusiastic and self-motivated Web <br/>Developer with 3 years of experience in creating websites.<br/><br/>- Proficient in Node, Angular, MongoDB, Mongoose, PHP, JavaScript, jQuery, Ajax, JSON, HTML, <br/> CSS, Processing and MySQL.<br/><br/>
-- Knowledgeable in ASP.NET, C++, C, C#,<br/> Java, Shell Scripting and Perl. 
+- Knowledgeable in ASP.NET, C++, C, C#,<br/> Java, Shell Scripting and Perl.
 <br/><br/>
 
 - Has always  been a hardworking employee.
@@ -340,7 +340,7 @@ February 2008 - April 2008
 <img id="goright" alt="goright" src="images/right.png" width="40" height="40" class="transform2 languageimage" style="position: relative; left: 310px; top: 200px; z-index: 20000; display: none; cursor: pointer"/>
 <img id="goright2" alt="goright2" src="images/goright.png" width="40" height="40" class="languageimage" style="position: absolute; left: 390px; top: 200px; z-index: 20000; cursor: pointer"/>
 <img id="lefthand" alt="lefthand" src="images/lefthand.png" />
-<img id="righthand" alt="righthand" src="images/righthand.png" />
+<img id="righthand" alt="righthand" src="images/righthand.png" /> -->
 
 
 

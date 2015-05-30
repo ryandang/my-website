@@ -1,4 +1,4 @@
-html
+/*html
 {
 	height: 100%;
 	height: auto !important;
@@ -11,8 +11,11 @@ min-height: 600px;
 height: 80%;
 height: auto !important;
 background: url("../images/bg.jpg");
-}
+}*/
 
+body {
+    background: url('../images/box-pikat.jpg');
+}
 
 #wrap
 {

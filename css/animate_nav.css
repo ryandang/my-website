@@ -1,5 +1,86 @@
 @charset "UTF-8";
 
+
+.top-bar
+{
+  height: 60px;
+  background: white;
+  border-bottom: solid #EC8574 2px;
+  box-shadow: 1px 10px 10px #888888;
+  position: relative;
+  z-index: 200000;
+}
+
+.top-bar li {
+  background: white;
+}
+
+.top-bar-section a {
+  height: 58px;
+  background: white;
+}
+
+.top-bar li i {
+  position: absolute;
+  margin-top: 5px;
+  color: #ec8674;
+}
+
+.top-bar li .icon-over{
+    color: #e73827;
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+.top-bar li:hover i {
+    opacity: 0.9;
+    width: 50px;
+    height: 50px;
+    transition-duration: 0.8s;
+}
+
+
+/*Change background on hover li */
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: white;
+  background: white;
+}
+
+/*Change background on hover li */
+.top-bar.expanded .top-bar-section li:not(.has-form) a:not(.button):hover {
+  border-bottom: solid 2px #ec8674;
+  border-top: solid 2px #ec8674;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background: #ffffff;
+}
+
+.top-bar .toggle-topbar.menu-icon a{
+  color: #ec8674;
+}
+.top-bar .toggle-topbar.menu-icon a span::after {
+  box-shadow: 0 0 0 1px #ec8674, 0 7px 0 1px #ec8674, 0 14px 0 1px #ec8674;
+}
+
+.menu-text {
+  color: #ec8674;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-top: 5px;
+  display: none;
+}
+
+.top-bar.expanded .menu-text{
+  display: inline-block;
+}
+
+.top-bar.expanded .ribbon {
+  display: none;
+}
+
+
 #menu {
     font-family: "TeXGyreAdventorBold","AvantGarde-Demi","Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,"AppleGothic",sans-serif;
     font-size: 35px;
@@ -90,69 +171,6 @@
     content: none;
 }
 
-.right-panel {
-    position: fixed;
-    left: 100px;
-    top: 5px;
-    color: black;
-    width: 100%;
-    height: 60px;
-    z-index: 20000;
-}
-
-.right-panel div {
-    position: relative;
-    float: left;
-    height: 60px;
-    width: 60px;
-    margin-left: 30px;
-}
-
-.right-panel div .icon-over{
-    color: #e73827;
-    width: 0%;
-    height: 0%;
-    overflow: hidden;
-}
-
-.right-panel a {
-    position: absolute;
-    color: #ec8674;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    transition-duration: 0.3s;
-    /*color: white;*/
-}
-
-.right-panel .icon-container:hover a {
-    opacity: 0.9;
-    width: 100%;
-    height: 100%;
-    transition-duration: 0.8s;
-}
-
-.right-panel i {
-    cursor: pointer;
-}
-
-.break-line{
-    /*width: 100%;*/
-    /*height: 200px;*/
-    background: url('../images/box-pikat.jpg');
-}
-
-.top-header {
-    width: 100%;
-    height: 60px;
-    background-color: white;
-    position: fixed;
-    z-index: 20000;
-border-bottom: solid #EC8574 2px;
-box-shadow: 1px 10px 10px #888888;
-}
-
-
 
 .ribbon {
   margin-right: 10px;
@@ -162,10 +180,10 @@ box-shadow: 1px 10px 10px #888888;
 
 .ribbon {
   display: block;
-  width: 40px;
-  position: relative;
+  width: 50px;
+  position: absolute;
   color: #fff;
-  padding: 20px 0 10px;
+  padding: 10px 0 10px;
   text-align: center;
   font-family: arial, sans-serif;
   font-weight: bold;
@@ -174,7 +192,7 @@ box-shadow: 1px 10px 10px #888888;
 
 .ribbon:before {
   display: block;
-  width: 40px;
+  width: 50px;
   height: 0;
   position: absolute;
   top: 4px;
@@ -189,9 +207,9 @@ box-shadow: 1px 10px 10px #888888;
   height: 0;
   content: "";
   position: relative;
-  bottom: -30px;
+  bottom: -35px;
   z-index: 100;
-  border-width: 0 20px 20px 20px;
+  border-width: 0 25px 25px 25px;
   border-style: solid;
 }
 
@@ -200,9 +218,9 @@ box-shadow: 1px 10px 10px #888888;
 */
 
 .ribbon.orange {
-    position: relative;
-    left: 40px;
-    top: 60px;
+  position: relative;
+  left: -100px;
+  top: 60px;
   background-color: #ec8674;
   background-repeat: repeat-x;
   background-image: -khtml-gradient(linear, left top, left bottom, from(#e73827), to(#e44200));
