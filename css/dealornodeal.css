@@ -1,0 +1,323 @@
+#prizelist
+{
+width: 220px;
+height: 320px;
+
+float:left;
+position: fixed; 
+/*
+margin-left: 600px;
+*/
+right: 5px;
+bottom: 0px;
+z-index: 10;
+}
+
+.prizelist
+{
+display:inline-block;
+width: 90px;
+height: 20px;
+text-align: right;
+
+}
+
+.pricelistbg,.pricelistbg0,.pricelistbg1,.pricelistbg10,.pricelistbg25,.pricelistbg50,.pricelistbg100,.pricelistbg5,
+.pricelistbg75,.pricelistbg200,.pricelistbg300,.pricelistbg400,.pricelistbg500,.pricelistbg750,.pricelistbg1000,.pricelistbg5000,
+.pricelistbg10000,.pricelistbg25000,.pricelistbg50000,.pricelistbg75000,.pricelistbg750000,.pricelistbg100000,.pricelistbg200000,
+.pricelistbg300000,.pricelistbg400000,.pricelistbg500000,.pricelistbg1000000
+{
+display:inline-block;
+height: 22px;
+width: 105px;
+margin-top: 2px;
+background-image: linear-gradient(left bottom, rgb(241,247,158) 0%, rgb(250,234,58) 48%, rgb(250,245,210) 100%);
+background-image: -o-linear-gradient(left bottom, rgb(241,247,158) 0%, rgb(250,234,58) 48%, rgb(250,245,210) 100%);
+background-image: -moz-linear-gradient(left bottom, rgb(241,247,158) 0%, rgb(250,234,58) 48%, rgb(250,245,210) 100%);
+background-image: -webkit-linear-gradient(left bottom, rgb(241,247,158) 0%, rgb(250,234,58) 48%, rgb(250,245,210) 100%);
+background-image: -ms-linear-gradient(left bottom, rgb(241,247,158) 0%, rgb(250,234,58) 48%, rgb(250,245,210) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	right top,
+	color-stop(0, rgb(241,247,158)),
+	color-stop(0.48, rgb(250,234,58)),
+	color-stop(1, rgb(250,245,210))
+);
+}
+
+.rightsideprize
+{
+margin-left: 4px;
+}
+
+#stage
+{
+position: relative;
+width: 900px;
+height: 700px;
+
+margin: auto;
+}
+
+.briefcase
+{
+width: 100px;
+height: 82px;
+background: url("../dealornodeal/images/case.png");
+display: inline-block;
+position: absolute;
+left: 5px;
+top:5px;
+cursor: pointer;
+text-align: center;
+line-height: 90px;
+font-family: Garamond, serif;
+color: #000000;
+font-weight:bold;
+font-size: 30px;
+text-shadow:0px 0px 0 rgb(-102,-102,-102), 1px 1px 0 rgb(-194,-194,-194),2px 2px 1px rgba(0,0,0,0.45),2px 2px 1px rgba(0,0,0,0.5),0px 0px 1px rgba(0,0,0,.2);
+z-index: 2;
+}
+
+.casecover
+{
+
+position: relative;
+width: 110px;
+height: 95px;
+display: inline-block;
+margin-left: 15px;
+}
+
+
+.briefcase:hover
+{
+/*
+border: solid 2px red;
+background: url("../dealornodeal/images/opencase.png") no-repeat;
+*/
+
+}
+
+.caseselected
+{
+	
+}
+
+.hostspeech1,.hostspeech2,.hostspeech3,.hostspeech4
+{
+	position: absolute;
+	width: 300px;
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	vertical-align: middle;
+	border: 1px solid #d9e0da;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: 4px 4px 1px #888;
+	-moz-box-shadow: 4px 4px 1px #888;
+	box-shadow: 4px 4px 1px #888;
+	left: 100px;
+	top:0px;
+	z-index: 1000;
+background-image: linear-gradient(bottom, rgb(217,224,218) 6%, rgb(242,250,244) 53%);
+background-image: -o-linear-gradient(bottom, rgb(217,224,218) 6%, rgb(242,250,244) 53%);
+background-image: -moz-linear-gradient(bottom, rgb(217,224,218) 6%, rgb(242,250,244) 53%);
+background-image: -webkit-linear-gradient(bottom, rgb(217,224,218) 6%, rgb(242,250,244) 53%);
+background-image: -ms-linear-gradient(bottom, rgb(217,224,218) 6%, rgb(242,250,244) 53%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.06, rgb(217,224,218)),
+	color-stop(0.53, rgb(242,250,244))
+);
+display: none;
+}
+
+
+p.hostspeech1:before,p.hostspeech2:before,p.hostspeech3:before,p.hostspeech4:before
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 10px;
+	top: 41px;
+	border: 8px solid;
+	border-color: #666 transparent transparent #666;
+	opacity: 0.6;
+}
+
+p.hostspeech1:after,p.hostspeech2:after,p.hostspeech3:after,p.hostspeech4:after
+{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 10px;
+	top: 38px;
+	border: 7px solid;
+	border-color: #d9e0da transparent transparent #d9e0da;
+}
+
+#hostimage
+{
+ position: absolute;
+ z-index: 10;
+}
+
+.floorstand
+{
+position: absolute; 
+left: 0px; 
+top: 75px; 
+z-index: 1;
+}
+
+#yourcase
+{
+	width: 300px;
+	height: 300px;
+	position: fixed;
+	bottom: -100px;
+	right: 40px;
+	z-index: 10;
+	display: none;
+}
+
+#banker
+{
+	position: fixed;
+	top: 200px;
+	left: 10px;
+	z-index: 10;
+	display: none;
+}
+
+#youroffer
+{
+	position: fixed;
+	bottom: 0px;
+	left: 150px;
+	z-index: 10;
+	width: 200px;
+	height: 260px;
+}
+
+/*Apply this class to some text to unlock the secrets of the third dimension!*/
+.offer{
+margin-left: 30px;
+font-family: Garamond, serif;
+line-height: 1em;
+color: #efff78;
+font-weight:bold;
+font-size: 20px;
+text-shadow:0px 0px 0 rgb(195,211,76),1px 1px 0 rgb(162,178,43),2px 2px 0 rgb(128,144,9), 3px 3px 0 rgb(94,110,-25),4px 4px 3px rgba(0,0,0,0.6),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);}
+
+/*Apply this class to some text to unlock the secrets of the third dimension!*/
+.letter4{
+position: relative;
+width: 270px;
+height: 70px;
+top: -50px;
+left: -110px;
+text-align: center;
+display: block;
+margin: auto;
+font-family: Garamond, serif;
+line-height: 1em;
+color: #83a2c7;
+font-weight:bold;
+font-size: 30px;
+text-shadow:0px 0px 0 rgb(104,135,172),0px 1px 0 rgb(86,117,154),0px 2px 0 rgb(69,100,137),0px 3px 0 rgb(51,82,119),0px 4px 0 rgb(34,65,102), 0px 5px 0 rgb(17,48,85),0px 6px 5px rgba(0,0,0,0.2),0px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,.2);}
+
+.dealbutton
+{
+	position: fixed;
+	bottom: 10px;
+	left: 350px;
+	height: 150px;
+	width: 400px;
+	z-index:10;
+}
+
+#dealbutton
+{
+width: 280px;
+height: 180px;
+display: block;
+background: url("../images/dealbutton1.png") no-repeat;
+background-position: center;
+position: relative;
+left: -5px;
+top: -25px;
+z-index:9;
+}
+
+#dealbutton:hover
+{
+cursor: pointer;
+background: url("../images/pressedbutton1.png") no-repeat;
+background-position: center;
+}
+
+.glassbox
+{
+	width: 320px;
+	height:320px;
+	display: none;
+	background: url("../images/test2.png") no-repeat;
+	position: relative;
+	top:-420px;
+	left: -16px;
+	border-radius: 0px 0px 130px 130px;
+	z-index: 8;
+	cursor: pointer;
+}
+.glassbox:hover
+{
+background: url("../images/testbox.png") no-repeat;
+top: -330px;
+left: -27px;
+border-radius: 0px;
+z-index: 10;
+cursor: pointer;
+}
+
+.closeglass
+{
+position: absolute;
+display: block;
+width: 320px;
+height:320px;
+background: url("../images/testbox.png") no-repeat;
+top: -130px;
+left: -27px;
+border-radius: 0px;
+z-index: 10;
+}
+
+.offerbg
+{
+	background: #549bc2;
+}
+
+
+#audio1
+{
+display: none;
+
+}
+
+#bigamount, #smallamount, #phonecall, #deal, #nodeal, #smalloffer, #largeoffer, #thinking, #dealorno
+{
+display: none;
+
+}

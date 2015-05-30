@@ -1,0 +1,303 @@
+#meinmath
+{
+	position: relative;
+	width: 400px;
+
+	display: inline-block;
+	margin-left: 40px;
+}
+
+#youinmath
+{
+	position: relative;
+	width: 400px;
+
+	display: inline-block;
+	margin-left: 40px;
+}
+
+
+#mathkeyboard
+{
+	position: absolute;
+	height: 400px;
+	width: 850px;
+	left: 25px;
+	color: white;
+background-image: linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -o-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -moz-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -webkit-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -ms-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.11, rgb(172,176,169)),
+	color-stop(0.33, rgb(232,237,230)),
+	color-stop(0.8, rgb(105,128,128))
+);
+border-radius: 20px;
+box-shadow: 10px 10px 5px grey;
+}
+
+#substract
+{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	top: 50px;
+	margin-left: 200px;
+background-image: linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -o-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -moz-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -webkit-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -ms-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.11, rgb(172,176,169)),
+	color-stop(0.33, rgb(232,237,230)),
+	color-stop(0.8, rgb(105,128,128))
+);
+z-index: 10;
+border-radius: 50%;
+
+}
+
+#divide
+{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	top: -150px;
+	margin-left: 500px;
+background-image: linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -o-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -moz-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -webkit-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+background-image: -ms-linear-gradient(bottom, rgb(172,176,169) 11%, rgb(232,237,230) 33%, rgb(105,128,128) 80%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.11, rgb(172,176,169)),
+	color-stop(0.33, rgb(232,237,230)),
+	color-stop(0.8, rgb(105,128,128))
+);
+z-index: 10;
+border-radius: 50%;
+
+}
+
+#divide:hover, #substract:hover
+{
+ cursor: pointer;
+background-image: linear-gradient(bottom, rgb(172,176,169) 0%, rgb(232,237,230) 0%, rgb(105,128,128) 36%, rgb(255,255,255) 100%);
+background-image: -o-linear-gradient(bottom, rgb(172,176,169) 0%, rgb(232,237,230) 0%, rgb(105,128,128) 36%, rgb(255,255,255) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(172,176,169) 0%, rgb(232,237,230) 0%, rgb(105,128,128) 36%, rgb(255,255,255) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(172,176,169) 0%, rgb(232,237,230) 0%, rgb(105,128,128) 36%, rgb(255,255,255) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(172,176,169) 0%, rgb(232,237,230) 0%, rgb(105,128,128) 36%, rgb(255,255,255) 100%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0, rgb(172,176,169)),
+	color-stop(0, rgb(232,237,230)),
+	color-stop(0.36, rgb(105,128,128)),
+	color-stop(1, rgb(255,255,255))
+);
+}
+
+#yournumber
+{
+	width: 200px;
+	height: 60px;
+	background: green;
+	position: relative;
+	left: 700px;
+	top: -400px;
+	color: white;
+	text-align: center;
+	line-height: 60px;
+	font-size: 25px;
+}
+
+#yournumbertitle
+{
+	width: 200px;
+	height: 30px;
+	position: relative;
+	left: 700px;
+	top: -400px;
+}
+/*Apply this class to some text to unlock the secrets of the third dimension!*/
+.letter3{
+position: relative;
+width: 70px;
+height: 70px;
+text-align: center;
+display: block;
+margin: auto;
+top: 60px;
+font-family: Garamond, serif;
+line-height: 1em;
+color: #83a2c7;
+font-weight:bold;
+font-size: 60px;
+text-shadow:0px 0px 0 rgb(104,135,172),0px 1px 0 rgb(86,117,154),0px 2px 0 rgb(69,100,137),0px 3px 0 rgb(51,82,119),0px 4px 0 rgb(34,65,102), 0px 5px 0 rgb(17,48,85),0px 6px 5px rgba(0,0,0,0.2),0px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,.2);}
+
+
+
+
+.button2 {
+	-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	box-shadow:inset 0px 1px 0px 0px #cae3fc;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #294f75) );
+	background:-moz-linear-gradient( center top, #79bbff 5%, #294f75 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#294f75');
+	background-color:#79bbff;
+	-webkit-border-top-left-radius:10px;
+	-moz-border-radius-topleft:10px;
+	border-top-left-radius:10px;
+	-webkit-border-top-right-radius:10px;
+	-moz-border-radius-topright:10px;
+	border-top-right-radius:10px;
+	-webkit-border-bottom-right-radius:10px;
+	-moz-border-radius-bottomright:10px;
+	border-bottom-right-radius:10px;
+	-webkit-border-bottom-left-radius:10px;
+	-moz-border-radius-bottomleft:10px;
+	border-bottom-left-radius:10px;
+	text-indent:0px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:50px;
+	line-height:50px;
+	width:200px;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #287ace;
+}
+.button2:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #294f75), color-stop(1, #79bbff) );
+	background:-moz-linear-gradient( center top, #294f75 5%, #79bbff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#294f75', endColorstr='#79bbff');
+	background-color:#294f75;
+	cursor: pointer;
+}.button2:active {
+	position:relative;
+	top:1px;
+}
+
+.selectedfirstturn
+{
+	background: #053b54;
+}
+.selectedfirstturn:hover
+{
+	background: #053b54;
+}
+
+#mathcover
+{
+display: none;
+}
+
+.movebackground1
+{
+	background: #87eb4d;
+}
+.movebackground2
+{
+	background: #9bfaf2;
+}
+.movebackground3
+{
+	background: #f58989;
+}
+.movebackground0
+{
+	background: #edf766;
+}
+
+.tab
+{
+	width: 250px;
+	height: 50px;
+	background: green;
+	float: left;
+	border-radius: 20px 20px 0px 0px;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.tab:hover
+{
+opacity: 0.9;
+}
+
+.selectedtab
+{
+	color: green;
+	background: white;
+	width: 250px;
+	height: 50px;
+	float: left;
+	border-radius: 20px 20px 0px 0px;
+	text-align: center;
+	font-size: 30px;
+	cursor: pointer;
+	border: solid 1px green;
+	border-bottom: solid 3px white;
+}
+
+.tab a
+{
+text-decoration: none;
+color: white;
+}
+.selectedtab a
+{
+text-decoration: none;
+color: green;
+}
+
+
+/*Apply this class to some text to unlock the secrets of the third dimension!*/
+.letter3{
+height: 70px;
+width: 120px;
+margin-left: 10px;
+text-align: center;
+display: inline-block;
+font-family: Garamond, serif;
+line-height: 1em;
+color: #83a2c7;
+font-weight:bold;
+font-size: 60px;
+text-shadow:0px 0px 0 rgb(104,135,172),0px 1px 0 rgb(86,117,154),0px 2px 0 rgb(69,100,137),0px 3px 0 rgb(51,82,119),0px 4px 0 rgb(34,65,102), 0px 5px 0 rgb(17,48,85),0px 6px 5px rgba(0,0,0,0.2),0px 6px 1px rgba(0,0,0,0.5),0px 0px 5px rgba(0,0,0,.2);}
+
+
+.letter3:hover{
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.selectednumber
+{
+	//border: solid 1px red;
+	background: green;
+}

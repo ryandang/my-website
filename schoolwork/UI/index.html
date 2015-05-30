@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pet-O-Rama</title>
+  
+  <link rel="stylesheet" href="css/foundation.css">
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="css/pet.css">  
+  <script src="js/jquery.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+<![endif]-->
+ <script>
+function openpopup () {
+$( "#dialog-confirm" ).dialog({
+resizable: false,
+height:440,
+width: 500,
+modal: true,
+buttons: {
+"Submit": function() {
+$( this ).dialog( "close" );
+},
+Cancel: function() {
+$( this ).dialog( "close" );
+}
+}
+});  
+} 
+ 
+</script>   
+</head>
+<body >
+<div id="wrap">
+<div id="dialog-confirm" title="Sign up for mail list" style="display: none;">
+<p></p>
+<input type="text" placeholder="First Name" />
+<input type="text" placeholder="Last Name" />
+<input type="text" placeholder="Your Email" />
+</div>
+
+<div class="bg2">
+	<div class="row">
+		<div class="large-9 columns bg2 height100">
+			<span class="color1 companyname">Pet-O-Rama </span>
+			<span class="color1">Makes buying and selling pets easy</span>
+		</div>		
+		<div class="large-3 columns bg2 height100">
+			<span class="color1 font-size1">Welcome Ryan Dang </span><p ><a href="#" class="button1">Log out</a></p>
+		</div>	
+
+	</div>
+</div>	
+
+<div class="bg4">
+	<div class="row">
+<div class="large-12 columns bg2 contain-to-grid" style="padding: 0px;">
+	
+<nav class="top-bar">
+  <ul class="title-area">
+    <!-- Title Area -->
+    <li class="name">
+      	<a href="postad.html"><span class="searchbtn" style="font-size: 40px; width: 200px; cursor: pointer; position: relative; top: 2px;">Post Ads</span></a><a href="#" style="color: #153819" onclick="openpopup()">Sign up for mail list</a>
+    </li>
+    <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+  
+  <section class="top-bar-section">
+	<ul class="right">
+		<li class="divider "></li>
+		<li ><a  href="index.html" class="navitem selectedtab">Home</a></li>
+		<li class="divider"></li>
+		<li ><a  href="breeder.html" class="navitem">Post Pet</a></li>
+		<li class="divider"></li>
+		<li ><a  href="lover.html" class="navitem">Pet Listing</a></li>
+		<li class="divider"></li>
+		<li class=""><a href="contact.html">Contact</a></li>
+		<li class="divider"></li>
+      <li class="divider show-for-small"></li>
+	</ul>
+  </section>
+  
+
+</nav>	
+
+</div>	
+
+	</div>
+	
+</div>	
+	
+	
+	<div class="row bg5 height400">
+		<div class="slideshow-wrapper">
+		<div class="preloader"></div>	
+			<ul data-orbit>
+			  <li>
+				<img src="img/dog1.jpg" class="sliderimg" />
+
+			  </li>
+			  <li>
+				<img src="img/dog2.jpg" class="sliderimg"/>
+
+			  </li>
+			   <li>
+				<img src="img/cat1.jpg" class="sliderimg"/>
+
+			  </li>
+			   <li>
+				<img src="img/cat2.jpg" class="sliderimg"/>
+
+			  </li>
+			</ul>	
+		</div>	
+	</div>
+	<div class="row height20">
+
+		</div>	
+
+	<div class="row height400" style="padding: 0px;">
+		<div class="large-6 columns" > 
+		
+			<a href="breeder.html"><h1 class="color1 centertext"> Post Pet </h1></a>
+			<div class="large-12 columns" style="padding: 0px;"> 
+			<p><a href="breeder.html" class="button3 breeder"></a></p>	
+			</div>
+		</div>
+		<div class="large-6 columns" >
+			<a href="lover.html"><h1 class="color1 centertext"> Pet Listing</h1></a>		
+			<div class="large-12 columns" style="padding: 0px;"> 
+			<p><a href="lover.html" class="button3 petlover" style="margin-left: 10px;"></a></p>			
+			</div>
+		</div>
+	</div>	
+	
+	
+</div>
+<div class="bg2" id="footer">
+<div class="row bg2" >
+	<div class="row height100"></div>
+	<div class="large-5 columns"> 	
+	<span class="color1">&copy; 2013 Pet-O-Rama Inc.<br/> All rights reserved.</span>
+	</div>
+	<div class="large-7 columns"> 
+	</div>
+</div>
+</div>
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>')
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.orbit.js"></script>  
+  <script src="js/foundation/foundation.topbar.js"></script>  
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  -->
+  
+  <script>
+   
+$(document).foundation('orbit', {
+  animation: 'fade',
+  timer_speed: 2000,
+  pause_on_hover: false,
+  resume_on_mouseout: false,
+  animation_speed: 500,
+  stack_on_small: false,
+  navigation_arrows: false,
+  slide_number: false,
+  container_class: 'orbit-container',
+  stack_on_small_class: 'orbit-stack-on-small',
+  next_class: 'orbit-next',
+  prev_class: 'orbit-prev',
+  timer_container_class: 'orbit-timer',
+  timer_paused_class: 'paused',
+  timer_progress_class: 'orbit-progress',
+  slides_container_class: 'orbit-slides-container',
+  bullets_container_class: 'orbit-bullets',
+  bullets_active_class: 'active',
+  slide_number_class: 'orbit-slide-number',
+  caption_class: 'orbit-caption',
+  active_slide_class: 'active',
+  orbit_transition_class: 'orbit-transitioning',
+  bullets: false,
+  timer: true,
+  variable_height: false,
+  before_slide_change: function(){},
+  after_slide_change: function(){}
+});
+ $(document).foundation();
+  </script>
+  
+
+</body>
+</html>

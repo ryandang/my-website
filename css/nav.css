@@ -1,0 +1,89 @@
+#navcont {
+	width: 100%;
+	height: 42px;
+	
+}
+	
+
+
+#nav {
+	
+	width: 90%;
+	min-width: 700px;
+	height: 42px;
+	list-style: none;
+	margin: 0 auto;
+	}
+
+#nav li {
+	float: left;
+	background: #d93d29;
+	border-radius: 0 0 15px 15px;
+	width: 150px;
+	text-align: center;
+	}
+	
+#nav a:link, #nav a:visited {
+	float: left;
+	line-height: 42px;
+	height: 42px;
+	display: block;
+	padding: 0 22px 0 22px;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 15px;
+	}
+
+#nav li:hover {
+	text-decoration: underline;
+	width: 150px;
+	background: #d96547;
+	border-radius: 0 0 15px 15px;	
+	}
+
+
+	
+	
+	
+#navMain_bg {
+background-image: linear-gradient(bottom, rgb(255,255,255) 5%, rgb(217,61,41) 87%, rgb(217,61,41) 77%);
+background-image: -o-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(217,61,41) 87%, rgb(217,61,41) 77%);
+background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(217,61,41) 87%, rgb(217,61,41) 77%);
+background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(217,61,41) 87%, rgb(217,61,41) 77%);
+background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 5%, rgb(217,61,41) 87%, rgb(217,61,41) 77%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.05, rgb(255,255,255)),
+	color-stop(0.87, rgb(217,61,41)),
+	color-stop(0.77, rgb(217,61,41))
+);
+width:100%; height: 400px;}
+
+#navContainer
+{
+	width: 900px;
+	height: 400px;
+	margin: auto;
+}
+
+#navMain {font:14px Arial;margin:auto;overflow:hidden;width:930px;position: relative; top: 81px;}
+#navMain ul {margin:0;padding:0; position: relative; top: 5px;}
+#navMain ul li {background:#d93d29;border-radius:10px 10px 0 0;
+  display:inline-block;margin:0 1px 0 0;padding:10px 35px; border-bottom:2px solid #157003;}
+
+#navMain ul li:hover{background: #f5654c; color: white; border-bottom:2px solid white;}
+#navMain ul li:hover a{color: white;}
+#navMain ul li a {color:white; text-decoration: none; font-size: 20px; font-weight: bold;}
+#navMain ul li:last-child {float:right;margin:0;}
+#navMain ul li.chosenone {border-bottom:2px solid white;background-color: white; color: white;}
+#navMain ul li.chosenone a{color: black;}
+
+
+#navMain ul a li {color: white;}
+#navMain ul a{display:inline-block;margin:0 10px 0 0;}
+#navMain ul a li.chosenone {color: black; border-bottom:2px solid white;}
+#navMain ul a li:hover {color: black;}
+#navMain ul a :last-child {float:right;margin:0;}	

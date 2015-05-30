@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pet-O-Rama</title>
+  
+  <link rel="stylesheet" href="css/foundation.css">
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="css/pet.css">  
+  <script src="js/jquery.js"></script>
+  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!--[if !IE 7]>
+	<style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+<![endif]-->
+ <script>
+$(function() {
+$( "#slider-range" ).slider({
+range: true,
+min: 0,
+step: 50,
+max: 2000,
+values: [ 0, 1000 ],
+slide: function( event, ui ) {
+$( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+}
+});
+
+
+$( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+" - $" + $( "#slider-range" ).slider( "values", 1 ) );
+});
+</script>
+ <script>
+function openpopup () {
+$( "#dialog-confirm" ).dialog({
+resizable: false,
+height:440,
+width: 500,
+modal: true,
+buttons: {
+"Submit": function() {
+$( this ).dialog( "close" );
+},
+Cancel: function() {
+$( this ).dialog( "close" );
+}
+}
+});  
+} 
+ function signin () {
+$( "#LogIn" ).dialog({
+resizable: false,
+height:340,
+width: 300,
+modal: true,
+buttons: {
+"Log In": function() {
+$( this ).dialog( "close" );
+},
+Cancel: function() {
+$( this ).dialog( "close" );
+}
+}
+});  
+
+} 
+</script>   
+</head>
+<body >
+<div id="wrap">
+<div id="dialog-confirm" title="Sign up for mail list" style="display: none;">
+<p></p>
+<input type="text" placeholder="First Name" />
+<input type="text" placeholder="Last Name" />
+<input type="text" placeholder="Your Email" />
+</div>
+<div id="LogIn" title="Log In" style="display: none;">
+<p></p>
+<input type="text" placeholder="User Name" />
+<input type="text" placeholder="Password" />
+<a href="#" style="font-size: 12px; color: #ffba39">Forgot your username or password?</a>
+</div>
+<div class="bg2">
+<div class="row  header">
+		<div class="large-10 columns bg2 height100">
+			<span class="color1 companyname">Pet-O-Rama </span>
+			<span class="color1">Connects pet breeders and prospective pet buyers</span>
+		</div>		
+		<div class="large-2 columns bg2 height100">
+			<br/><a href="#" class="color1" onclick="signin()">Sign In</a> &nbsp;&nbsp;&nbsp; <a href="#" class="color1">Register</a><br/>
+			
+		</div>	
+</div>
+</div>
+		
+<div class="bg4">
+<div class="row  header">
+		<div class="large-12 columns bg2 contain-to-grid" style="padding: 0px;">
+			
+		<nav class="top-bar">
+		  <ul class="title-area">
+			<!-- Title Area -->
+			<li class="name">
+			   	<a href="postad.html"><span class="searchbtn" style="font-size: 40px; width: 200px; cursor: pointer; position: relative; top: 2px;">Post Ads</span></a><a href="#" style="color: #153819" onclick="openpopup()">Sign up for mail list</a>
+			</li>
+			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		  </ul>
+		  
+		  <section class="top-bar-section">
+			<ul class="right">
+				<li class="divider "></li>
+				<li ><a  href="index.html" class="navitem">Home</a></li>
+				<li class="divider"></li>
+				<li ><a href="#" class="color1" onclick="signin()">Post Pet</a></li>
+				<li class="divider"></li>
+				<li ><a  href="lover.html" class="navitem selectedtab">Pet Listing</a></li>		
+				<li class="divider"></li>
+				<li class=""><a href="contact.html">Contact</a></li>
+				<li class="divider"></li>
+			  <li class="divider show-for-small"></li>
+			</ul>
+		  </section>
+		  
+
+		</nav>	
+
+		</div>
+</div>
+</div>
+<div class="row height20">
+</div>
+<div class="row height160 bg4" style="border-radius: 20px">
+	<div class="row height40">
+		
+		<h3 style="text-align: center; color: #153819">Find a pet</h3>
+	</div>
+	<div class="row height50">
+		<div class="large-2 columns">
+			<select class='selectwidth'>
+				<option>Any Pet Type</option>
+				<option>Dog</option>
+				<option>Cat</option>
+				<option>Bird</option>
+			</select>			
+		</div>
+		<div class="large-2 columns">
+			<select class='selectwidth'>
+				<option>Any Breed</option>
+				<option>Mixed Breed</option>
+				<option>Whippet</option>
+				<option>Yorkshire Terrier</option>
+			</select>						
+		</div>
+		
+		<div class="large-2 columns">		
+			<select class='selectwidth'>
+				<option>Any Gender</option>
+				<option>Female</option>
+				<option>Male</option>
+				<option>Unkown</option>
+			</select>			
+		</div>
+	<div class="large-2 columns">
+<select class='selectwidth'>
+	<option>Canada</option>
+	<option>US</option>
+	<option>Brazil</option>
+</select>	
+	</div>
+	
+	<div class="large-2 columns">
+<select class='selectwidth'>
+	<option>Ontario</option>
+	<option>Quebec</option>
+</select>
+	</div>
+	
+	<div class="large-2 columns">
+		<select class='selectwidth'>
+			<option>North York</option>
+			<option>Toronto</option>
+			<option>Vaughan</option>
+		</select>
+	</div>
+
+	</div>
+
+	
+<div class="row height50">
+		<div class="large-2 columns">
+			<select class='selectwidth'>
+				<option>Sale Ads</option>
+				<option>Wanted Ads</option>
+
+			</select>			
+		</div>
+		<div class="large-2 columns">			
+			<select class='selectwidth'>
+				<option>Available Now</option>
+				<option>In 1 week</option>
+				<option>In 2 weeks</option>
+				<option>In 3 weeks</option>
+			</select>				
+		</div>
+		<div class="large-2 columns">
+			<select class='selectwidth'>
+				<option>Any Payment</option>
+				<option>Paypal</option>
+				<option>Visa</option>
+				<option>Cash</option>
+			</select>				
+		</div>
+
+	<div class="large-4 columns">
+
+<span id="amount" style="color: #153819; font-weight: bold; position: relative; left:100px;top: -10px"></span>
+<!--<input type="text" readonly="true" id="amount" style="border: 0; color: #f6931f; font-weight: bold; width: 100px; display: inline-block" />-->
+
+
+<div id="slider-range" ></div>
+		
+	</div>
+		<div class="large-2 columns">
+			<p> <a class="searchbtn">Find Pets</a></p>
+		</div>
+</div>
+
+
+
+
+	
+	
+	
+		
+	
+</div>
+<div class="row height20">
+</div>
+<div class="row">
+	<div class="large-4 columns">
+Sort By:
+<select class='selectwidth'>
+	<option>Newest Date</option>
+	<option>Oldest Date</option>
+	<option>Lowest Price</option>
+	<option>Highest Price</option>
+	<option>Closest Distance</option>
+</select>
+	</div>
+	<div class="large-4 columns">
+<!--
+Sort By Price:	
+<select class='selectwidth'>
+	<option>Any</option>
+	<option>Lowest</option>
+	<option>Highest</option>
+</select>-->
+	</div>
+
+	<div class="large-4 columns">
+<!--		
+Sort By Distance:	
+<select class='selectwidth'>
+	<option>5 Miles</option>
+	<option>10 Miles</option>
+	<option>20 Miles</option>
+</select>-->
+	</div>
+</div>
+<div class="row" class="resultrow">
+	<div class="large-2 columns"><a href="sampleview.html"><img src="img/dog1.jpg" alt="dog" class="imgview"/></a></div>	
+	<div class="large-6 columns"><a href="sampleview.html"><h4>Pet Title 1</h4></a>
+		
+	species, breed, gender. <br/>
+	Additional description or information from seller
+	<br/><br/>	
+	Quantity: 3 - available now
+	</div>	
+	<div class="large-2 columns"><h6>Toronto, Ontario</h6> <br/><br/><span style="font-size: 13px">Payment: Paypal, Visa, Cash</span></div>
+	<div class="large-2 columns"><h6>$200</h6> <br/><br/> <span style="font-size: 13px">Posted: Oct 10, 2013</span></div>	
+</div>
+<div class="row height10" >
+</div>
+<div class="row" class="resultrow">
+	<div class="large-2 columns"><a href="sampleview.html"><img src="img/dog1.jpg" alt="dog" class="imgview"/></a></div>	
+	<div class="large-6 columns"><a href="sampleview.html"><h4>Pet Title 2</h4></a>
+		
+	species, breed, gender. <br/>
+	Additional description or information from seller
+	<br/><br/>	
+	Quantity: 1 - available now
+	</div>	
+	<div class="large-2 columns"><h6>Toronto, Ontario</h6> <br/><br/><span style="font-size: 13px">Payment: Paypal, Visa, Cash</span></div>
+	<div class="large-2 columns"><h6>$200</h6> <br/><br/> <span style="font-size: 13px">Posted: Oct 10, 2013</span></div>
+</div>
+<div class="row height10" >
+</div>
+<div class="row" class="resultrow">
+	<div class="large-2 columns"><a href="sampleview.html"><img src="img/cat1.jpg" alt="dog" class="imgview"/></a></div>	
+	<div class="large-6 columns"><a href="sampleview.html"><h4>Pet Title 3</h4></a>
+		
+	species, breed, gender. <br/>
+	Additional description or information from seller
+	<br/><br/>	
+	Quantity: 1 - available now
+	</div>	
+	<div class="large-2 columns"><h6>Toronto, Ontario</h6> <br/><br/><span style="font-size: 13px">Payment: Paypal, Visa, Cash</span></div>
+	<div class="large-2 columns"><h6>$200</h6> <br/><br/> <span style="font-size: 13px">Posted: Oct 10, 2013</span></div>
+</div>
+
+
+</div>
+<div class="bg2" id="footer">
+<div class="row bg2" id="footer">
+	<div class="row height100"></div>
+	<div class="large-5 columns"> 	
+	<span class="color1">&copy; 2013 Pet-O-Rama Inc.<br/> All rights reserved.</span>
+	</div>
+	<div class="large-7 columns"> 
+	</div>
+</div>
+</div>
+  <script>
+  document.write('<script src=' +
+  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+  '.js><\/script>');
+  </script>
+  
+  <script src="js/foundation.min.js"></script>
+  <script src="js/foundation/foundation.orbit.js"></script>  
+  <script src="js/foundation/foundation.topbar.js"></script>  
+  <!--
+  
+  <script src="js/foundation/foundation.js"></script>
+  
+  <script src="js/foundation/foundation.alerts.js"></script>
+  
+  <script src="js/foundation/foundation.clearing.js"></script>
+  
+  <script src="js/foundation/foundation.cookie.js"></script>
+  
+  <script src="js/foundation/foundation.dropdown.js"></script>
+  
+  <script src="js/foundation/foundation.forms.js"></script>
+  
+  <script src="js/foundation/foundation.joyride.js"></script>
+  
+  <script src="js/foundation/foundation.magellan.js"></script>
+  
+
+  
+  <script src="js/foundation/foundation.reveal.js"></script>
+  
+  <script src="js/foundation/foundation.section.js"></script>
+  
+  <script src="js/foundation/foundation.tooltips.js"></script>
+  
+
+  
+  <script src="js/foundation/foundation.interchange.js"></script>
+  
+  <script src="js/foundation/foundation.placeholder.js"></script>
+  
+  <script src="js/foundation/foundation.abide.js"></script>
+  
+  -->
+  
+  <script>
+ $(document).foundation();
+  </script>
+  
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+#menu {
+    font-family: "TeXGyreAdventorBold","AvantGarde-Demi","Avant Garde",Avantgarde,"Century Gothic",CenturyGothic,"AppleGothic",sans-serif;
+    font-size: 35px;
+	font-weight: bold;
+	position: relative;
+	top:115px;	
+    line-height: 1;
+    list-style: none outside none;
+    margin-left: 0px;
+    padding: 0 0 0.2em;
+    right: 0;
+	display: inline-block;
+    text-shadow: 2px -2px 0 #c1c7c7, 1px -1px 0 #c1c7c7;
+    z-index: 1;
+	width: 600px;
+}
+
+
+#menu:before, #menu:after {
+    content: "";
+    display: table;
+}
+#menu:after {
+    clear: both;
+}
+#menu li {
+    margin-left: 0px;
+    padding: 0;
+    text-align: center;
+	display: inline-block;
+}
+
+
+
+#menu li a {
+    color: #4a4646;
+    display: inline-block;
+    line-height: 1.5;
+    position: relative;
+	text-decoration: none;
+}
+#menu li a:before {
+    -moz-box-sizing: border-box;
+    color: #EC8574;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: width 0.5s ease 0s, left 0.5s ease 0s;
+    width: 0;
+}
+
+#menu li a[href*="social_network"]:before {
+
+    content: "SocialNetwork";
+
+}
+#menu li a[href*="aboutme"]:before {
+
+    content: "FBI";
+}
+#menu li a[href*="works"]:before {
+    content: "Projects";
+}
+#menu li a[href*="contact"]:before {
+    content: "Contact";
+}
+#menu li a[href*="games"]:before {
+    content: "Games";
+}
+#menu li a:hover {
+    border-bottom: medium none;
+    text-decoration: none;
+}
+#menu li a:hover:before {
+    width: 100%;
+}
+
+#menu li.active a {
+    color: #EC8574;
+    cursor: default;
+}
+#menu li.active a:before {
+    content: none;
+}
+
+
+
