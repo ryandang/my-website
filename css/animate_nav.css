@@ -5,7 +5,7 @@
     font-size: 35px;
 	font-weight: bold;
 	position: relative;
-	top:115px;	
+	top:115px;
     line-height: 1;
     list-style: none outside none;
     margin-left: 0px;
@@ -17,22 +17,21 @@
 	width: 600px;
 }
 
-
 #menu:before, #menu:after {
     content: "";
     display: table;
 }
+
 #menu:after {
     clear: both;
 }
+
 #menu li {
     margin-left: 0px;
     padding: 0;
     text-align: center;
 	display: inline-block;
 }
-
-
 
 #menu li a {
     color: #4a4646;
@@ -41,6 +40,7 @@
     position: relative;
 	text-decoration: none;
 }
+
 #menu li a:before {
     -moz-box-sizing: border-box;
     color: #EC8574;
@@ -52,27 +52,31 @@
 }
 
 #menu li a[href*="social_network"]:before {
-
     content: "SocialNetwork";
 
 }
-#menu li a[href*="aboutme"]:before {
 
+#menu li a[href*="aboutme"]:before {
     content: "FBI";
 }
+
 #menu li a[href*="works"]:before {
     content: "Projects";
 }
+
 #menu li a[href*="contact"]:before {
     content: "Contact";
 }
+
 #menu li a[href*="games"]:before {
     content: "Games";
 }
+
 #menu li a:hover {
     border-bottom: medium none;
     text-decoration: none;
 }
+
 #menu li a:hover:before {
     width: 100%;
 }
@@ -81,9 +85,135 @@
     color: #EC8574;
     cursor: default;
 }
+
 #menu li.active a:before {
     content: none;
 }
 
+.right-panel {
+    position: fixed;
+    left: 100px;
+    top: 5px;
+    color: black;
+    width: 100%;
+    height: 60px;
+    z-index: 20000;
+}
+
+.right-panel div {
+    position: relative;
+    float: left;
+    height: 60px;
+    width: 60px;
+    margin-left: 30px;
+}
+
+.right-panel div .icon-over{
+    color: #e73827;
+    width: 0%;
+    height: 0%;
+    overflow: hidden;
+}
+
+.right-panel a {
+    position: absolute;
+    color: #ec8674;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.3s;
+    /*color: white;*/
+}
+
+.right-panel .icon-container:hover a {
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    transition-duration: 0.8s;
+}
+
+.right-panel i {
+    cursor: pointer;
+}
+
+.break-line{
+    /*width: 100%;*/
+    /*height: 200px;*/
+    background: url('../images/box-pikat.jpg');
+}
+
+.top-header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    position: fixed;
+    z-index: 20000;
+border-bottom: solid #EC8574 2px;
+box-shadow: 1px 10px 10px #888888;
+}
 
 
+
+.ribbon {
+  margin-right: 10px;
+  float: left;
+}
+/* End demo css */
+
+.ribbon {
+  display: block;
+  width: 40px;
+  position: relative;
+  color: #fff;
+  padding: 20px 0 10px;
+  text-align: center;
+  font-family: arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.ribbon:before {
+  display: block;
+  width: 40px;
+  height: 0;
+  position: absolute;
+  top: 4px;
+  content: "";
+  border-top: 1px dotted rgba(0, 0, 0, 0.2);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+
+.ribbon:after {
+  display: block;
+  width: 0;
+  height: 0;
+  content: "";
+  position: relative;
+  bottom: -30px;
+  z-index: 100;
+  border-width: 0 20px 20px 20px;
+  border-style: solid;
+}
+
+/*
+    Ribbon colors
+*/
+
+.ribbon.orange {
+    position: relative;
+    left: 40px;
+    top: 60px;
+  background-color: #ec8674;
+  background-repeat: repeat-x;
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#e73827), to(#e44200));
+  background-image: -moz-linear-gradient(top, #e73827, #ec8674);
+  background-image: -ms-linear-gradient(top, #e73827, #ec8674);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e73827), color-stop(100%, #ec8674));
+  background-image: -webkit-linear-gradient(top, #e73827, #ec8674);
+  background-image: -o-linear-gradient(top, #e73827, #ec8674);
+  background-image: linear-gradient(top, #e73827, #ec8674);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e73827', endColorstr='#e44200', GradientType=0);
+}
+.ribbon.orange:after {
+  border-color: #ec8674 #ec8674 transparent #ec8674;
+}
