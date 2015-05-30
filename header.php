@@ -52,8 +52,8 @@ $imagearrys = array("profile1.jpg");
 <script src="<?php echo BASE_URL; ?>js/jquery-form.js"></script>
 
 
-<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>jqzoom_ev-2.3/css/jquery.jqzoom.css"> 
-<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/custom-theme/jquery-ui-1.10.0.custom.css"> 
+<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>jqzoom_ev-2.3/css/jquery.jqzoom.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/custom-theme/jquery-ui-1.10.0.custom.css">
 <script>
 
 
@@ -159,14 +159,14 @@ $("#overlaysidebar").mouseenter(function(){
 	//alert("ASDAS");
 	$("#sidebar").animate({left: "-10px"});
 	$("#overlaysidebar").animate({left: "-10px"});
-	
+
 });
 
 $("#overlaysidebar").mouseleave(function(){
 	//alert("ASDAS");
 	$("#sidebar").animate({left: "-75px"});
 	$("#overlaysidebar").animate({left: "-75px"});
-	
+
 });
 
 
@@ -195,7 +195,7 @@ var ProcessingInit = function() {
     pCanvas.resize($(window).width(),$(window).height());
 	alert("ASDA");
   }
-  
+
   $(window).resize(resizeWindow);
   resizeWindow();
 }
@@ -216,14 +216,14 @@ var ProcessingInit = function() {
 	$("#me").hide();
 	$("#pen").hide();
 	$("#pen").css("left","250px");
-	$("#pen").css("opacity","0.1");	
-	$("#me").css("opacity","0.1");		
+	$("#pen").css("opacity","0.1");
+	$("#me").css("opacity","0.1");
 	var animatetime = 500;
 	var starttime =5000;
 		setTimeout(function(){
 		$("#desk").fadeIn();
 		//$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
-		},starttime += animatetime);	
+		},starttime += animatetime);
 		setTimeout(function(){
 		$("#mac").fadeIn();
 		},starttime += animatetime);
@@ -232,23 +232,23 @@ var ProcessingInit = function() {
 		},starttime += animatetime);
 		setTimeout(function(){
 		$("#pen").show();
-		$("#pen").animate({left: "220px",opacity : "1"},500);	
+		$("#pen").animate({left: "220px",opacity : "1"},500);
 		},starttime += animatetime);
 		setTimeout(function(){
 		$("#lamp").show();
-		$("#lamp").animate({left: "80px",opacity : "1"},500);	
+		$("#lamp").animate({left: "80px",opacity : "1"},500);
 		},starttime += animatetime);
 		setTimeout(function(){
-		$("#chair").show();	
-		$("#chair").animate({top: "133px",opacity : "1"},1000);			
+		$("#chair").show();
+		$("#chair").animate({top: "133px",opacity : "1"},1000);
 		},starttime += animatetime);
 		setTimeout(function(){
 		$("#me").show();
-		$("#me").animate({opacity : "1"},1000);			
+		$("#me").animate({opacity : "1"},1000);
 		},starttime += animatetime*3);
 
 			  var waittime = 100;
-			  
+
 
 			 var message = "Check Out My Work...";
 			  for (x=0; x<message.length; x++)
@@ -257,7 +257,7 @@ var ProcessingInit = function() {
 				    $(".speech1").fadeIn();
 					$(".speech1").append(message[globalcounter]);
 					globalcounter++;
-				},starttime + waittime*x);					
+				},starttime + waittime*x);
 			  }
 
 //let's move number 2 top:100px; left: 140px;
@@ -269,36 +269,36 @@ var ProcessingInit = function() {
 	$(".Three-Dee").css("top","20px");
 	$(".Three-Dee3").css("left","-50px");
 	$(".Three-Dee3").css("opacity","0.1");
-	$(".Three-Dee4").css("opacity","0.1");	
-	$(".Three-Dee2").css("opacity","0.1");	
-	$(".Three-Dee").css("opacity","0.1");	
+	$(".Three-Dee4").css("opacity","0.1");
+	$(".Three-Dee2").css("opacity","0.1");
+	$(".Three-Dee").css("opacity","0.1");
 	$(".Three-Dee4").css("font-size","1000px");
 	$("#menu").hide();
-	
-	
+
+
 		setTimeout(function(){
-		$(".Three-Dee3").show();	
-		$(".Three-Dee3").animate({left: "160px",opacity : "1"},0);			
-		},500);	
-								
+		$(".Three-Dee3").show();
+		$(".Three-Dee3").animate({left: "160px",opacity : "1"},0);
+		},500);
+
 		setTimeout(function(){
 		$(".Three-Dee4").show();
 		$(".Three-Dee4").animate({"font-size": "100px",opacity : "1"},0);
 		},1500);
-		
+
 		setTimeout(function(){
 		$(".Three-Dee2").show();
 		$(".Three-Dee2").animate({opacity : "1"},0);
 		},2500);
-		
+
 		setTimeout(function(){
 		$(".Three-Dee").show();
 		$(".Three-Dee").animate({top: "100px",opacity : "1"},0);
-		},3500);	
+		},3500);
 		setTimeout(function(){
 		$("#menu").fadeIn();
 		},4500);
-	
+
 */
 
 
@@ -317,14 +317,14 @@ var ProcessingInit = function() {
 	$("#me").hide();
 	$("#pen").hide();
 	$("#pen").css("left","250px");
-	$("#pen").css("opacity","0.1");	
-	$("#me").css("opacity","0.1");		
+	$("#pen").css("opacity","0.1");
+	$("#me").css("opacity","0.1");
 	var animatetime = 500;
 	var starttime =100;
 		setTimeout(function(){
 		$("#desk").fadeIn();
 		//$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
-		},starttime += animatetime);	
+		},starttime += animatetime);
 		setTimeout(function(){
 		$("#mac").fadeIn();
 		},starttime += animatetime);
@@ -333,19 +333,19 @@ var ProcessingInit = function() {
 		},starttime += animatetime);
 		setTimeout(function(){
 		$("#pen").show();
-		$("#pen").animate({left: "220px",opacity : "1"},500);	
+		$("#pen").animate({left: "220px",opacity : "1"},500);
 		},starttime += animatetime);
 		setTimeout(function(){
 		$("#lamp").show();
-		$("#lamp").animate({left: "80px",opacity : "1"},500);	
+		$("#lamp").animate({left: "80px",opacity : "1"},500);
 		},starttime += animatetime);
 		setTimeout(function(){
-		$("#chair").show();	
-		$("#chair").animate({top: "133px",opacity : "1"},1000);			
+		$("#chair").show();
+		$("#chair").animate({top: "133px",opacity : "1"},1000);
 		},starttime += animatetime);
 		setTimeout(function(){
 		$("#me").show();
-		$("#me").animate({opacity : "1"},1000);			
+		$("#me").animate({opacity : "1"},1000);
 		},starttime += animatetime*3);
 
 
@@ -361,7 +361,7 @@ var ProcessingInit = function() {
 			var message = "Check Out My Work";
 			<?php }?>
 			$(".speech1").html("");
-			 var waittime = 100;			 
+			 var waittime = 100;
 			 starttime += 500;
 			  for (x=0; x<message.length; x++)
 			  {
@@ -369,10 +369,10 @@ var ProcessingInit = function() {
 				    $(".speech1").fadeIn();
 					$(".speech1").append(message[globalcounter]);
 					globalcounter++;
-				},starttime+ waittime*x);					
+				},starttime+ waittime*x);
 			  }
 			*/
-			
+
 			/*
 			<?php if($page =="works.php"){?>
 			var message = "Check Out My Games";
@@ -386,19 +386,19 @@ var ProcessingInit = function() {
 			var message = "Check Out My Work";
 			<?php }?>
 			$(".speech1").html("");
-			 var waittime = 100;			 
+			 var waittime = 100;
 			  for (x=0; x<message.length; x++)
 			  {
 				setTimeout(function(){
 				    $(".speech1").fadeIn();
 					$(".speech1").append(message[globalcounter]);
 					globalcounter++;
-				},waittime*x);					
+				},waittime*x);
 			  }
 			*/
-			  
 
-	
+
+
 });
 
 function resizeCanvas()
@@ -415,14 +415,14 @@ function playmusic()
 		notplaying = false;
 			for (var i = 0, ar = []; i < arraysongs.length; i++) {
 				ar[i] = i;
-			}		
+			}
 			  // randomize the array
 			  ar.sort(function () {
 				  return Math.random() - 0.5;
 			  });
 			for (var i = 0, ar2 = []; i < 4; i++) {
 				ar2[i] = i;
-			}		
+			}
 			  // randomize the array
 			  ar2.sort(function () {
 				  return Math.random() - 0.5;
@@ -430,38 +430,38 @@ function playmusic()
 			  /*
 
 			  */
-			  
-			  
-		
-		
+
+
+
+
 		var waittime = 2000;
 		//alert(arraysongs[ar[0]][0]);
 
 		/*
 		setTimeout(function(){
 			$(".speech1").html(arraysongs[ar[0]][0]);
-		},waittime*1);			
-			
+		},waittime*1);
+
 		setTimeout(function(){
 			$(".speech1").html(arraysongs[ar[0]][1]);
-		},waittime*2);				
+		},waittime*2);
 		*/
-		
-	
+
+
 	$(".speech2").html(arraymusicnotes[ar2[0]] + " " +arraysongs[ar[0]][1]);
 	$(".speech1").html(arraymusicnotes[ar2[1]] + " " +arraysongs[ar[0]][0]);
 	$(".speech3").html(arraymusicnotes[ar2[2]] + " " +arraysongs[ar[0]][2]);
-	$(".speech4").html(arraymusicnotes[ar2[3]] + " " +arraysongs[ar[0]][3]);	
-	
-	$(".speech1").fadeIn();	
+	$(".speech4").html(arraymusicnotes[ar2[3]] + " " +arraysongs[ar[0]][3]);
+
+	$(".speech1").fadeIn();
 	$('.speech1').delay(2000).fadeOut();
-	$('.speech2').delay(3000).fadeIn();	
-	$('.speech2').delay(2000).fadeOut();	
-	$('.speech3').delay(6000).fadeIn();	
+	$('.speech2').delay(3000).fadeIn();
+	$('.speech2').delay(2000).fadeOut();
+	$('.speech3').delay(6000).fadeIn();
 	$('.speech3').delay(2000).fadeOut();
-	$('.speech4').delay(9000).fadeIn();	
+	$('.speech4').delay(9000).fadeIn();
 	$('.speech4').delay(2000).fadeOut();
-	
+
 		setTimeout(function(){
 		notplaying = true;
 		},11000);
@@ -503,9 +503,9 @@ function playmusic()
 <a href="<?php echo BASE_URL; ?>works?language=MySQL"><span class="mysql smalltext">MySQL </span> </a>
 <a href="<?php echo BASE_URL; ?>works?language=HTML"><span class="html smalltext">HTML</span> </a>
 <a href="<?php echo BASE_URL; ?>works?language=HTML5"><span class="html5 smalltext">HTML5 </span></a>
-<a href="<?php echo BASE_URL; ?>works?language=Processing.js"><span class="processing smallertext">Processing.js </span> </a> 
+<a href="<?php echo BASE_URL; ?>works?language=Processing.js"><span class="processing smallertext">Processing.js </span> </a>
 -->
-<ul id="menu" class="menu" style="width: 900px">
+<ul id="menu" style="width: 900px">
 <li class="menu-1-portfolio <?php if($page == "aboutme.php") echo "active" ?>" style="margin-left: 35px;">
 <a href="<?php echo BASE_URL; ?>aboutme">FBI</a>
 </li>
@@ -527,18 +527,6 @@ function playmusic()
 
 
 </div>
-
-<!--
-<div id="mycorner">
-<img id="chair" src ="<?php echo BASE_URL; ?>images/chair.png" alt="chair"/>
-<img id="me" src ="<?php echo BASE_URL; ?>images/me2.png" alt="Ryan"/>
-<img id="desk" src ="<?php echo BASE_URL; ?>images/desk.png" alt="desk"/>
-<img id="mac" src="<?php echo BASE_URL; ?>images/Mac.png" alt="mac" />
-<img id="pen" src="<?php echo BASE_URL; ?>images/penholder.png" alt="pen" />
-<img id="lamp" src="<?php echo BASE_URL; ?>images/lamp.png" alt="lamp" />
-<img id="phone" src="<?php echo BASE_URL; ?>images/s4.png" alt="phone" />
-</div>
--->
 </div>
 <div  style="position: absolute; top:0px; width: 100%; overflow: hidden;"><canvas id="pCanvas" data-processing-sources="boat/boat.pde"></canvas></div>
 </div>
@@ -560,7 +548,7 @@ function playmusic()
 <a href="<?php echo BASE_URL; ?>works?language=mysql"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/mysql.png" alt="mysql"/></a>
 <!--<span class="infopopup" style="position: relative;" alt="YAY"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/puzzle_game.jpg" /></span>-->
 </div>
-<div id="sidebar"> 
+<div id="sidebar">
 </div>
 <div class="row">
 <div id="rightpannel" style="<?php if($page == "social_network.php") echo "background: white"; else if ($page == "dealornodeal/dealornodeal.php") echo "overflow: visible";?> ">
