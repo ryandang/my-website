@@ -33,6 +33,13 @@
     overflow: hidden;
 }
 
+.top-bar li .active{
+    color: #e73827;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
 .top-bar li:hover i {
     opacity: 0.9;
     width: 50px;
@@ -40,6 +47,9 @@
     transition-duration: 0.8s;
 }
 
+.top-bar li:hover span {
+  color: #e73827;
+}
 
 /*Change background on hover li */
 .top-bar-section li:not(.has-form) a:not(.button):hover {
@@ -49,8 +59,8 @@
 
 /*Change background on hover li */
 .top-bar.expanded .top-bar-section li:not(.has-form) a:not(.button):hover {
-  border-bottom: solid 2px #ec8674;
-  border-top: solid 2px #ec8674;
+  border-bottom: solid 2px #e73827;
+  border-top: solid 2px #e73827;
 }
 
 .top-bar-section li:not(.has-form) a:not(.button) {
@@ -70,6 +80,10 @@
   margin-left: 50px;
   margin-top: 5px;
   display: none;
+}
+
+.menu-text.activeText {
+  color: #e73827;
 }
 
 .top-bar.expanded .menu-text{
