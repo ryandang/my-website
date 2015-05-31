@@ -261,78 +261,79 @@ $("#overlaysidebar").mouseleave(function(){
 <!-- <div  style="position: absolute; top:0px; width: 100%; overflow: hidden;"><canvas id="pCanvas" data-processing-sources="boat/boat.pde"></canvas></div>
 </div> -->
 
-<nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
-    <li class="name">
-      <h1 style="font-size: 30px">Ryan Dang</h1>
-    </li>
-     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
+	<nav class="top-bar" data-topbar role="navigation">
+	  <ul class="title-area">
+	    <li class="name">
+	      <h1 style="font-size: 30px">Ryan Dang</h1>
+	    </li>
+	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	  </ul>
 
-  <section class="top-bar-section">
-    <!-- Left Nav Section -->
-    <ul class="left">
-      <li title="Home">
-      	<a href="./">
-      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over"></i>
-      		<span class="menu-text">Home</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
+	  <section class="top-bar-section">
+	    <!-- Left Nav Section -->
+	    <ul class="left">
+	      <li title="Home">
+	      	<a href="<?php echo BASE_URL; ?>./">
+	      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over"></i>
+	      		<span class="menu-text">Home</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
 
-      <li title="My Profile">
-      	<a href="aboutme">
-      		<i class="fa fa-user fa-3x"></i><i class="fa fa-user fa-3x icon-over"></i>
-      		<span class="menu-text">My Profile</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
+	      <li title="My Profile">
+	      	<a href="<?php echo BASE_URL; ?>aboutme">
+	      		<i class="fa fa-user fa-3x"></i><i class="fa fa-user fa-3x icon-over <?php if($page == "aboutme.php") echo "active" ?>""></i>
+	      		<span class="menu-text <?php if($page == "aboutme.php") echo "activeText" ?>">My Profile</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
 
-      <li title="My Projects">
-      	<a href="works">
-      		<i class="fa fa-briefcase fa-3x"></i><i class="fa fa-briefcase fa-3x icon-over"></i>
-      		<span class="menu-text">My Projects</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
+	      <li title="My Projects">
+	      	<a href="<?php echo BASE_URL; ?>works">
+	      		<i class="fa fa-briefcase fa-3x"></i><i class="fa fa-briefcase fa-3x icon-over <?php if($page == "works.php") echo "active" ?>"></i>
+	      		<span class="menu-text <?php if($page == "works.php") echo "activeText" ?>">My Projects</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
 
-      <li title="My School Works">
-      	<a href="#">
-      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
-      		<span class="menu-text">My School Works</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
+	      <li title="My School Works">
+	      	<a href="<?php echo BASE_URL; ?>#">
+	      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
+	      		<span class="menu-text">My School Works</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
 
-      <li title="My Games">
-      	<a href="games">
-      		<i class="fa fa-gamepad fa-3x"></i><i class="fa fa-gamepad fa-3x icon-over"></i>
-      		<span class="menu-text">My Games</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
-    </ul>
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li title="Connect">
-      	<a href="#">
-      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
-      		<span class="menu-text">Connect With Me</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
-      <li title="Contact">
-      	<a href="contact">
-      		<i class="fa fa-envelope fa-3x"></i><i class="fa fa-envelope fa-3x icon-over"></i>
-      		<span class="menu-text">Contact Me</span>
-      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      	</a>
-      </li>
-    </ul>
-  </section>
-  <span class="ribbon orange"><?php echo $today ?></span>
-</nav>
+	      <li title="My Games">
+	      	<a href="<?php echo BASE_URL; ?>games">
+	      		<i class="fa fa-gamepad fa-3x"></i><i class="fa fa-gamepad fa-3x icon-over <?php if($page == "games.php" || $page == "assembling_game/puzzle.php") echo "active" ?>"></i>
+	      		<span class="menu-text <?php if($page == "games.php" || $page == "assembling_game/puzzle.php") echo "activeText" ?>">My Games</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+	    </ul>
+	    <!-- Right Nav Section -->
+	    <ul class="right">
+	      <li title="Connect">
+	      	<a href="<?php echo BASE_URL; ?>#">
+	      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
+	      		<span class="menu-text">Connect With Me</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+	      <li title="Contact">
+	      	<a href="<?php echo BASE_URL; ?>contact">
+	      		<i class="fa fa-envelope fa-3x"></i><i class="fa fa-envelope fa-3x icon-over <?php if($page == "contact.php") echo "active" ?>"></i>
+	      		<span class="menu-text <?php if($page == "contact.php") echo "activeText" ?>">Contact Me</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+	    </ul>
+	  </section>
+	  <span class="ribbon orange"><?php echo $today ?></span>
+	</nav>
+
 
 
 

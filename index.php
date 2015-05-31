@@ -303,15 +303,15 @@ $today = date("M j");
 	    <!-- Left Nav Section -->
 	    <ul class="left">
 	      <li title="Home">
-	      	<a href="./">
-	      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over"></i>
+	      	<a href="<?php echo BASE_URL; ?>./">
+	      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over active"></i>
 	      		<span class="menu-text">Home</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	      	</a>
 	      </li>
 
 	      <li title="My Profile">
-	      	<a href="aboutme">
+	      	<a href="<?php echo BASE_URL; ?>aboutme">
 	      		<i class="fa fa-user fa-3x"></i><i class="fa fa-user fa-3x icon-over"></i>
 	      		<span class="menu-text">My Profile</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -319,7 +319,7 @@ $today = date("M j");
 	      </li>
 
 	      <li title="My Projects">
-	      	<a href="works">
+	      	<a href="<?php echo BASE_URL; ?>works">
 	      		<i class="fa fa-briefcase fa-3x"></i><i class="fa fa-briefcase fa-3x icon-over"></i>
 	      		<span class="menu-text">My Projects</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -327,7 +327,7 @@ $today = date("M j");
 	      </li>
 
 	      <li title="My School Works">
-	      	<a href="#">
+	      	<a href="<?php echo BASE_URL; ?>#">
 	      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
 	      		<span class="menu-text">My School Works</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -335,7 +335,7 @@ $today = date("M j");
 	      </li>
 
 	      <li title="My Games">
-	      	<a href="games">
+	      	<a href="<?php echo BASE_URL; ?>games">
 	      		<i class="fa fa-gamepad fa-3x"></i><i class="fa fa-gamepad fa-3x icon-over"></i>
 	      		<span class="menu-text">My Games</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -345,14 +345,14 @@ $today = date("M j");
 	    <!-- Right Nav Section -->
 	    <ul class="right">
 	      <li title="Connect">
-	      	<a href="#">
+	      	<a href="<?php echo BASE_URL; ?>#">
 	      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
 	      		<span class="menu-text">Connect With Me</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	      	</a>
 	      </li>
 	      <li title="Contact">
-	      	<a href="contact">
+	      	<a href="<?php echo BASE_URL; ?>contact">
 	      		<i class="fa fa-envelope fa-3x"></i><i class="fa fa-envelope fa-3x icon-over"></i>
 	      		<span class="menu-text">Contact Me</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
