@@ -8,27 +8,28 @@ $today = date("M j");
 	<meta charset="UTF-8">
 	<meta property="fb:admins" content="1513364736"/>
 	<meta name="description" content="Ryan Dang Website. A personal website that provides more information about Ryan Dang - Web developer. Please contact me for more information">
-	<!--
+
 	<meta name="viewport" content="width=device-width">
-	-->
+
 	<meta name="keywords" content="Ryan Dang Web Developer proficient in PHP Ajax Jquery HTML5 HTML CSS MySql JavaScript JSON C C++ Java asp.net">
 	<title>Ryan Dang Porfolio</title>
 
+	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>foundation/css/foundation.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 	<link rel="stylesheet" href="<?php echo BASE_URL; ?>font-awesome-4.2.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/animate_nav.css" />
 
 	<script type='text/javascript' src='<?php echo BASE_URL; ?>js/jquery-1.10.1.min.js'></script>
 	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script src="<?php echo BASE_URL; ?>foundation/js/foundation.min.js" type="text/javascript"></script>
+
 	<style>
-		html
-		{
+		html {
 			height: 100%;
 			overflow: hidden;
 			max-height: 1600px;
 		}
-		body
-		{
+		body {
 			height: 100%;
 			margin: 0px;
 			overflow: hidden;
@@ -36,14 +37,12 @@ $today = date("M j");
 			background: url('images/box-pikat.jpg');
 		}
 
-		h1
-		{
+		h1 {
 			color: #ec8674;
-			font-size: 46px;
+			font-size: 36px;
 		}
 
-		.innerdiv
-		{
+		.innerdiv {
 			width: 80%;
 			height: 600px;
 			min-width: 900px;
@@ -51,8 +50,7 @@ $today = date("M j");
 			margin: auto;
 			top: 50%;
 		}
-		.mycorner
-		{
+		.mycorner {
 			width: 900px;
 			height: 600px;
 			margin: auto;
@@ -71,8 +69,7 @@ $today = date("M j");
 			/*color: white;*/
 		}
 
-		.outterdiv
-		{
+		.outterdiv {
 			width: 100%;
 			margin: auto;
 			margin-top: auto;
@@ -83,29 +80,27 @@ $today = date("M j");
 			position: absolute;
 		}
 
-		#host,#host1,#host2,#host3, #host4, #host5, #profile
-		{
+		#host,#host1,#host2,#host3, #host4, #host5, #profile {
 			width: 314px;
 			height: 600px;
+			margin-top: 70px;
 		}
 
-		ul
-		{
-			font-size:30px;
-			list-style-image:url('images/valid3.png');
+		.ulcont ul {
+			font-size: 24px;
+			list-style-image: url('images/valid3.png');
 			position: relative;
 			top: -50px;
 		}
 
-		li
-		{
+		.ulcont li {
 			margin-bottom: 10px;
 			position: relative;
 			display: none;
 		}
-		.ulcont
-		{
-			width: 530px;
+
+		.ulcont {
+			width: 500px;
 			height: 550px;
 			position: relative;
 			top: -600px;
@@ -126,7 +121,62 @@ $today = date("M j");
 		                no-repeat;
 		}
 
+		#profile-pic {
+			width: 250px;
+			height: 250px;
+			margin-left: 50px;
+			border-radius: 20px;
+		}
 
+		@media only screen and (max-width: 58.75em) {
+			h1 {
+				font-size: 16px;
+			}
+
+			#host,#host1,#host2,#host3, #host4, #host5, #profile {
+				width: 100px;
+				height: 250px;
+				margin-top: 35px;
+			}
+
+			.mycorner {
+				width: 450px;
+				height: 300px;
+			}
+
+			.innerdiv {
+				width: 80%;
+				height: 300px;
+				min-width: 450px;
+			}
+
+			.ulcont {
+				width: 300px;
+				height: 275px;
+				position: relative;
+				top: -300px;
+				left: 175px;
+				padding-right: 10px;
+			}
+
+			.ulcont ul {
+				font-size: 12px;
+				top: 30px;
+				list-style-image:url('images/valid3-small.png');
+				left: -40px;
+			}
+
+			.ulcont li {
+				margin-bottom: 5px;
+			}
+
+			#profile-pic {
+				width: 100px;
+				height: 100px;
+				margin-left: 10px;
+				border-radius: 20px;
+			}
+		}
 	</style>
 	<script>
 		function moveTo(position, accumulatedtime)
@@ -240,50 +290,87 @@ $today = date("M j");
 <body >
 	<div class="modal"></div>
 
-	<div class="top-header">
-		<span class="ribbon orange"><?php echo $today ?></span>
-	</div>
+	<nav class="top-bar" data-topbar role="navigation">
+	  <ul class="title-area">
+	    <li class="name">
+	      <h1 style="font-size: 30px">Ryan Dang</h1>
+	    </li>
+	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	  </ul>
 
-	<div class="right-panel">
-		<div class="icon-container">
-			<a href="./"><i class="fa fa-home fa-3x"></i></a>
-			<a class="icon-over" href="./"><i class="fa fa-home fa-3x"></i></a>
-		</div>
-		<div class="icon-container" >
-			<a href="aboutme"><i class="fa fa-user fa-3x"></i></a>
-			<a class="icon-over" href="aboutme"><i class="fa fa-user fa-3x"></i></a>
-		</div>
-		<div class="icon-container">
-			<a href="works"><i class="fa fa-briefcase fa-3x"></i></a>
-			<a class="icon-over" href="works"><i class="fa fa-briefcase fa-3x"></i></a>
-		</div>
-		<div class="icon-container">
-			<a href="school"><i class="fa fa-graduation-cap fa-3x"></i></a>
-			<a class="icon-over" href="school"><i class="fa fa-graduation-cap fa-3x"></i></a>
-		</div>
-		<div class="icon-container">
-			<a href="games"><i class="fa fa-gamepad fa-3x"></i></a>
-			<a class="icon-over" href="games"><i class="fa fa-gamepad fa-3x"></i></a>
-		</div>
-		<div class="icon-container">
-			<a href="aboutme"><i class="fa fa-users fa-3x"></i></a>
-			<a class="icon-over" href="aboutme"><i class="fa fa-users fa-3x"></i></a>
-		</div>
+	  <section class="top-bar-section">
+	    <!-- Left Nav Section -->
+	    <ul class="left">
+	      <li title="Home">
+	      	<a href="./">
+	      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over"></i>
+	      		<span class="menu-text">Home</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
 
-		<div class="icon-container">
-			<a href="contact"><i class="fa fa-envelope fa-3x"></i></a>
-			<a class="icon-over" href="contact"><i class="fa fa-envelope fa-3x"></i></a>
-		</div>
-	</div>
+	      <li title="My Profile">
+	      	<a href="aboutme">
+	      		<i class="fa fa-user fa-3x"></i><i class="fa fa-user fa-3x icon-over"></i>
+	      		<span class="menu-text">My Profile</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
 
-	<div id="movingbody" style="height: 100%; position: relative;">
+	      <li title="My Projects">
+	      	<a href="works">
+	      		<i class="fa fa-briefcase fa-3x"></i><i class="fa fa-briefcase fa-3x icon-over"></i>
+	      		<span class="menu-text">My Projects</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+
+	      <li title="My School Works">
+	      	<a href="#">
+	      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
+	      		<span class="menu-text">My School Works</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+
+	      <li title="My Games">
+	      	<a href="games">
+	      		<i class="fa fa-gamepad fa-3x"></i><i class="fa fa-gamepad fa-3x icon-over"></i>
+	      		<span class="menu-text">My Games</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+	    </ul>
+	    <!-- Right Nav Section -->
+	    <ul class="right">
+	      <li title="Connect">
+	      	<a href="#">
+	      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
+	      		<span class="menu-text">Connect With Me</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+	      <li title="Contact">
+	      	<a href="contact">
+	      		<i class="fa fa-envelope fa-3x"></i><i class="fa fa-envelope fa-3x icon-over"></i>
+	      		<span class="menu-text">Contact Me</span>
+	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	      	</a>
+	      </li>
+	    </ul>
+	  </section>
+	  <span class="ribbon orange"><?php echo $today ?></span>
+	</nav>
+
+	<div class="row" id="movingbody" style="height: 100%; position: relative;">
 		<div  class="outterdiv" style="z-index: 20;">
 			<div class="innerdiv" >
 				<div class="mycorner" >
 					<div style="text-align: center"> <h1> About Me</h1> </div>
 					<div id="profile">
 					<br/>
-					<img src="<?php echo BASE_URL; ?>images/linkin.png" alt="host" width="250px" height="250px" style="margin-left: 50px; border-radius: 20px;"/>
+					<img id="profile-pic" src="<?php echo BASE_URL; ?>images/linkin.png" alt="host" />
 					</div>
 					<div class="ulcont">
 						<ul id="aboutMe">
@@ -309,7 +396,6 @@ $today = date("M j");
 							<li id="php2" >Experience with popular frame work such as CakePHP, Codeigniter, and Yii</li>
 							<li id="php3"> Experience with Drupal CMS framework </li>
 						</ul>
-						<!-- <a href="works?language=PHP"><span class="button" > Check My Work </span></a> -->
 					</div>
 				</div>
 			</div>
@@ -325,7 +411,6 @@ $today = date("M j");
 							<li id="js1">Excellent Javascript skills </li>
 							<li id="js2">2 years of experience in develop website front end using javascript and jQuery </li>
 						</ul>
-						<!-- <a href="works?language=javascript"><span class="button" > Check My Work </span></a> -->
 					</div>
 				</div>
 			</div>
@@ -342,7 +427,6 @@ $today = date("M j");
 							<li id="html2">Have great understanding about User Interface </li>
 							<li id="html3">Always put the users first when develop website  </li>
 						</ul>
-						<!-- <a href="works?language=HTML"><span class="button" > Check My Work </span></a> -->
 					</div>
 				</div>
 			</div>
@@ -381,6 +465,9 @@ $today = date("M j");
 			</div>
 		</div>
 	</div>
+<script>
+ $(document).foundation();
+</script>
 </body>
 </html>
 

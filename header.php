@@ -8,7 +8,7 @@ if(isset($_SESSION["playedit"]))
 $_SESSION["playedit"] = false;
 else
 $_SESSION["playedit"] = true;
-
+$today = date("M j");
 
 
 
@@ -28,6 +28,8 @@ $imagearrys = array("profile1.jpg");
 -->
 <meta name="keywords" content="Ryan Dang Web Developer proficient in PHP Ajax Jquery HTML5 HTML CSS MySql JavaScript JSON C C++ Java asp.net">
 <title>Ryan Dang</title>
+
+<link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>foundation/css/foundation.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/style.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/nivo-slider.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/animate_nav.css" />
@@ -37,7 +39,7 @@ $imagearrys = array("profile1.jpg");
 <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/themes/bar/bar.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/dealornodeal.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php echo BASE_URL; ?>css/math.css" type="text/css" media="screen" />
-
+<link rel="stylesheet" href="<?php echo BASE_URL; ?>font-awesome-4.2.0/css/font-awesome.min.css">
 
 <script src="<?php echo BASE_URL; ?>js/jquery-1.9.0.min.js" type="text/javascript"></script>
 <script src="<?php echo BASE_URL; ?>js/bootstrap.min.js" type="text/javascript"></script>
@@ -50,10 +52,12 @@ $imagearrys = array("profile1.jpg");
 <script src="<?php echo BASE_URL; ?>roncioso-Flip/jquery.flippy.min.js" type="text/javascript"></script>
 <script type='text/javascript' src='<?php echo BASE_URL; ?>jqzoom_ev-2.3/js/jquery.jqzoom-core.js'></script>
 <script src="<?php echo BASE_URL; ?>js/jquery-form.js"></script>
+<script src="<?php echo BASE_URL; ?>foundation/js/foundation.min.js" type="text/javascript"></script>
 
 
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>jqzoom_ev-2.3/css/jquery.jqzoom.css">
 <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>css/custom-theme/jquery-ui-1.10.0.custom.css">
+
 <script>
 
 
@@ -112,33 +116,24 @@ var globalcounter2 = 0;
 var globalcounter3 = 0;
 var globalcounter4 = 0;
 $(document).ready(function() {
-//var mysketch = Processing.getInstanceById('pCanvas');
-//mysketch.size($( window ).width(),230);
-
-
-//playmusic();
 $(document).ajaxStart(function() {
     $("body").addClass("loading");
-	//$("body").css("overflow", "hidden");
 });
 
 $(document).ajaxStop(function() {
     $("body").removeClass("loading");
-	//$("body").css("overflow", "auto");
 });
-$('#headerNote').removeClass("growtext");
-$('#headerNote').css("font-size","24px");
-$('#headerNote').addClass("growtext");
-$('#headerNote').delay(2000).fadeOut(2500);
+// $('#headerNote').removeClass("growtext");
+// $('#headerNote').css("font-size","24px");
+// $('#headerNote').addClass("growtext");
+// $('#headerNote').delay(2000).fadeOut(2500);
 
-$("#header_profile_image").mouseenter(function(){
-	//alert("YEA");
-playmusic();
-});
-$("#header_profile_image").click(function(){
-	//alert("YEA");
-playmusic();
-});
+// $("#header_profile_image").mouseenter(function(){
+// playmusic();
+// });
+// $("#header_profile_image").click(function(){
+// playmusic();
+// });
 
 
 $("#overlaysidebar").click(function(){
@@ -156,14 +151,12 @@ $("#overlaysidebar").click(function(){
 	}
 });
 $("#overlaysidebar").mouseenter(function(){
-	//alert("ASDAS");
 	$("#sidebar").animate({left: "-10px"});
 	$("#overlaysidebar").animate({left: "-10px"});
 
 });
 
 $("#overlaysidebar").mouseleave(function(){
-	//alert("ASDAS");
 	$("#sidebar").animate({left: "-75px"});
 	$("#overlaysidebar").animate({left: "-75px"});
 
@@ -171,340 +164,81 @@ $("#overlaysidebar").mouseleave(function(){
 
 
 
-//var mysketch = Processing.getInstanceById('pCanvas');
-//mysketch.size($( window ).width(),230);
-$( window ).resize(function() {
-var mysketch = Processing.getInstanceById('pCanvas');
-mysketch.size($( window ).width(),230);
-//alert("ASDA");
-});
-
-
-
-/*
-$( window ).resize(function() {
-
-$('#pCanvas').css("width", $( window ).width());
-$('#pCanvas').css("height", "230px");
-});
-//Resize Canvas
-/*
-var ProcessingInit = function() {
-  function resizeWindow() {
-    var pCanvas = Processing.getInstanceById('pCanvas');
-    pCanvas.resize($(window).width(),$(window).height());
-	alert("ASDA");
-  }
-
-  $(window).resize(resizeWindow);
-  resizeWindow();
-}
-*/
-
-/*
-	$("#phone").hide();
-	$("#desk").hide();
-	$(".speech1").hide();
-	$(".speech1").html("");
-	$("#mac").hide();
-	$("#lamp").hide();
-	$("#lamp").css("left","50px");
-	$("#lamp").css("opacity","0.1");
-	$("#chair").hide();
-	$("#chair").css("top","50px");
-	$("#chair").css("opacity","0.1");
-	$("#me").hide();
-	$("#pen").hide();
-	$("#pen").css("left","250px");
-	$("#pen").css("opacity","0.1");
-	$("#me").css("opacity","0.1");
-	var animatetime = 500;
-	var starttime =5000;
-		setTimeout(function(){
-		$("#desk").fadeIn();
-		//$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#mac").fadeIn();
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#phone").fadeIn();
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#pen").show();
-		$("#pen").animate({left: "220px",opacity : "1"},500);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#lamp").show();
-		$("#lamp").animate({left: "80px",opacity : "1"},500);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#chair").show();
-		$("#chair").animate({top: "133px",opacity : "1"},1000);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#me").show();
-		$("#me").animate({opacity : "1"},1000);
-		},starttime += animatetime*3);
-
-			  var waittime = 100;
-
-
-			 var message = "Check Out My Work...";
-			  for (x=0; x<message.length; x++)
-			  {
-				setTimeout(function(){
-				    $(".speech1").fadeIn();
-					$(".speech1").append(message[globalcounter]);
-					globalcounter++;
-				},starttime + waittime*x);
-			  }
-
-//let's move number 2 top:100px; left: 140px;
-
-	$(".Three-Dee3").hide();
-	$(".Three-Dee2").hide();
-	$(".Three-Dee").hide();
-	$(".Three-Dee4").hide();
-	$(".Three-Dee").css("top","20px");
-	$(".Three-Dee3").css("left","-50px");
-	$(".Three-Dee3").css("opacity","0.1");
-	$(".Three-Dee4").css("opacity","0.1");
-	$(".Three-Dee2").css("opacity","0.1");
-	$(".Three-Dee").css("opacity","0.1");
-	$(".Three-Dee4").css("font-size","1000px");
-	$("#menu").hide();
-
-
-		setTimeout(function(){
-		$(".Three-Dee3").show();
-		$(".Three-Dee3").animate({left: "160px",opacity : "1"},0);
-		},500);
-
-		setTimeout(function(){
-		$(".Three-Dee4").show();
-		$(".Three-Dee4").animate({"font-size": "100px",opacity : "1"},0);
-		},1500);
-
-		setTimeout(function(){
-		$(".Three-Dee2").show();
-		$(".Three-Dee2").animate({opacity : "1"},0);
-		},2500);
-
-		setTimeout(function(){
-		$(".Three-Dee").show();
-		$(".Three-Dee").animate({top: "100px",opacity : "1"},0);
-		},3500);
-		setTimeout(function(){
-		$("#menu").fadeIn();
-		},4500);
-
-*/
-
-
-/*
-	$("#phone").hide();
-	$("#desk").hide();
-	$(".speech1").hide();
-	$(".speech1").html("");
-	$("#mac").hide();
-	$("#lamp").hide();
-	$("#lamp").css("left","50px");
-	$("#lamp").css("opacity","0.1");
-	$("#chair").hide();
-	$("#chair").css("top","50px");
-	$("#chair").css("opacity","0.1");
-	$("#me").hide();
-	$("#pen").hide();
-	$("#pen").css("left","250px");
-	$("#pen").css("opacity","0.1");
-	$("#me").css("opacity","0.1");
-	var animatetime = 500;
-	var starttime =100;
-		setTimeout(function(){
-		$("#desk").fadeIn();
-		//$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#mac").fadeIn();
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#phone").fadeIn();
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#pen").show();
-		$("#pen").animate({left: "220px",opacity : "1"},500);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#lamp").show();
-		$("#lamp").animate({left: "80px",opacity : "1"},500);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#chair").show();
-		$("#chair").animate({top: "133px",opacity : "1"},1000);
-		},starttime += animatetime);
-		setTimeout(function(){
-		$("#me").show();
-		$("#me").animate({opacity : "1"},1000);
-		},starttime += animatetime*3);
-
-
-			<?php if($page =="works.php"){?>
-			var message = "Check Out My Games";
-			<?php } else if($page =="aboutme.php"){ ?>
-			var message = "Check Out My Work";
-			<?php } else if($page =="games.php"){ ?>
-			var message = "Check Out My Profile";
-			<?php } else if($page =="contact.php"){ ?>
-			var message = "Leave me a message";
-			<?php } else {?>
-			var message = "Check Out My Work";
-			<?php }?>
-			$(".speech1").html("");
-			 var waittime = 100;
-			 starttime += 500;
-			  for (x=0; x<message.length; x++)
-			  {
-				setTimeout(function(){
-				    $(".speech1").fadeIn();
-					$(".speech1").append(message[globalcounter]);
-					globalcounter++;
-				},starttime+ waittime*x);
-			  }
-			*/
-
-			/*
-			<?php if($page =="works.php"){?>
-			var message = "Check Out My Games";
-			<?php } else if($page =="aboutme.php"){ ?>
-			var message = "Check Out My Work";
-			<?php } else if($page =="games.php"){ ?>
-			var message = "Check Out My Profile";
-			<?php } else if($page =="contact.php"){ ?>
-			var message = "Leave me a message";
-			<?php } else {?>
-			var message = "Check Out My Work";
-			<?php }?>
-			$(".speech1").html("");
-			 var waittime = 100;
-			  for (x=0; x<message.length; x++)
-			  {
-				setTimeout(function(){
-				    $(".speech1").fadeIn();
-					$(".speech1").append(message[globalcounter]);
-					globalcounter++;
-				},waittime*x);
-			  }
-			*/
-
+// $( window ).resize(function() {
+// var mysketch = Processing.getInstanceById('pCanvas');
+// mysketch.size($( window ).width(),230);
+// });
 
 
 });
 
-function resizeCanvas()
-{
-var mysketch = Processing.getInstanceById('pCanvas');
-mysketch.size($( window ).width(),230);
-alert("ASDAS");
-}
+// function resizeCanvas()
+// {
+// var mysketch = Processing.getInstanceById('pCanvas');
+// mysketch.size($( window ).width(),230);
+// alert("ASDAS");
+// }
 
-function playmusic()
-{
-	if(notplaying)
-	{
-		notplaying = false;
-			for (var i = 0, ar = []; i < arraysongs.length; i++) {
-				ar[i] = i;
-			}
-			  // randomize the array
-			  ar.sort(function () {
-				  return Math.random() - 0.5;
-			  });
-			for (var i = 0, ar2 = []; i < 4; i++) {
-				ar2[i] = i;
-			}
-			  // randomize the array
-			  ar2.sort(function () {
-				  return Math.random() - 0.5;
-			  });
-			  /*
+// function playmusic()
+// {
+// 	if(notplaying)
+// 	{
+// 		notplaying = false;
+// 			for (var i = 0, ar = []; i < arraysongs.length; i++) {
+// 				ar[i] = i;
+// 			}
+// 			  // randomize the array
+// 			  ar.sort(function () {
+// 				  return Math.random() - 0.5;
+// 			  });
+// 			for (var i = 0, ar2 = []; i < 4; i++) {
+// 				ar2[i] = i;
+// 			}
+// 			  // randomize the array
+// 			  ar2.sort(function () {
+// 				  return Math.random() - 0.5;
+// 			  });
 
-			  */
+// 		var waittime = 2000;
 
+// 	$(".speech2").html(arraymusicnotes[ar2[0]] + " " +arraysongs[ar[0]][1]);
+// 	$(".speech1").html(arraymusicnotes[ar2[1]] + " " +arraysongs[ar[0]][0]);
+// 	$(".speech3").html(arraymusicnotes[ar2[2]] + " " +arraysongs[ar[0]][2]);
+// 	$(".speech4").html(arraymusicnotes[ar2[3]] + " " +arraysongs[ar[0]][3]);
 
+// 	$(".speech1").fadeIn();
+// 	$('.speech1').delay(2000).fadeOut();
+// 	$('.speech2').delay(3000).fadeIn();
+// 	$('.speech2').delay(2000).fadeOut();
+// 	$('.speech3').delay(6000).fadeIn();
+// 	$('.speech3').delay(2000).fadeOut();
+// 	$('.speech4').delay(9000).fadeIn();
+// 	$('.speech4').delay(2000).fadeOut();
 
+// 		setTimeout(function(){
+// 		notplaying = true;
+// 		},11000);
+// 	}
+// }
 
-		var waittime = 2000;
-		//alert(arraysongs[ar[0]][0]);
-
-		/*
-		setTimeout(function(){
-			$(".speech1").html(arraysongs[ar[0]][0]);
-		},waittime*1);
-
-		setTimeout(function(){
-			$(".speech1").html(arraysongs[ar[0]][1]);
-		},waittime*2);
-		*/
-
-
-	$(".speech2").html(arraymusicnotes[ar2[0]] + " " +arraysongs[ar[0]][1]);
-	$(".speech1").html(arraymusicnotes[ar2[1]] + " " +arraysongs[ar[0]][0]);
-	$(".speech3").html(arraymusicnotes[ar2[2]] + " " +arraysongs[ar[0]][2]);
-	$(".speech4").html(arraymusicnotes[ar2[3]] + " " +arraysongs[ar[0]][3]);
-
-	$(".speech1").fadeIn();
-	$('.speech1').delay(2000).fadeOut();
-	$('.speech2').delay(3000).fadeIn();
-	$('.speech2').delay(2000).fadeOut();
-	$('.speech3').delay(6000).fadeIn();
-	$('.speech3').delay(2000).fadeOut();
-	$('.speech4').delay(9000).fadeIn();
-	$('.speech4').delay(2000).fadeOut();
-
-		setTimeout(function(){
-		notplaying = true;
-		},11000);
-	}
-}
 </script>
 </head>
 
-<body >
-<div id="wrap">
-<div class="modal"></div>
-<div id='headerNoteContainer'><div id='headerNote'><?php show_session_note() ?></div></div>
-<div id='headerNoteContainer2'><div id='headerNote2'></div></div>
-<div id='top_header' class="coolbackground2">
+<body>
+<!-- 	<div id="wrap"> -->
+	<!-- <div class="modal"></div> -->
 
-<div id="menucontainer" style="position: relative; top: -80px; width:900px; min-width: 900px; margin: auto; height: 300px;">
+	<!-- <div id='headerNoteContainer'><div id='headerNote'><?php show_session_note() ?></div></div> -->
+	<!-- <div id='headerNoteContainer2'><div id='headerNote2'></div></div> -->
+	<!-- <div id='top_header' class="coolbackground2"> -->
+
+<!-- <div id="menucontainer" style="position: relative; top: -80px; width:900px; min-width: 900px; margin: auto; height: 300px;">
 <div id="menuitems">
-<!--
-<p class="speech1" style="text-align: left; left: 850px; top: 70px;"> <?php if($page == "works.php"){ echo "Check Out My Game..."; }else echo "Check Out My Work..."; ?> </p>
--->
 <p class="speech1"> </p>
 <p class="speech2"> </p>
 <p class="speech3"> </p>
 <p class="speech4"> </p>
-<!--
-<span class="Three-Dee3" style="position: absolute; top:100px; left: 150px; z-index: -10;">2</span>
--->
 <img id="header_profile_image" src="<?php echo BASE_URL; ?>images/<?php echo $imagearrys[0]; ?>" width="200" height="200" alt="Profile Image"/>
-<!--
-<span class="Three-Dee4" style="position: absolute; top:100px; left: 210px;z-index: -10;">0</span>
-<span class="Three-Dee2" style="position: absolute; top:100px; left: 270px;z-index: -10;">1</span>
-<span class="Three-Dee" style="position: absolute; top:100px; left:320px;z-index: -10;">4</span>
-
-<a href="<?php echo BASE_URL; ?>works?language=PHP"><span class="php smalltext">PHP </span></a>
-<a href="<?php echo BASE_URL; ?>works?language=jQuery"><span class="jQuery smalltext">jQuery </span> </a>
-<a href="<?php echo BASE_URL; ?>works?language=Ajax"><span class="Ajax smalltext">Ajax </span> </a>
-<a href="<?php echo BASE_URL; ?>works?language=Javascript"><span class="javascript smalltext">JavaScript </span> </a>
-<a href="<?php echo BASE_URL; ?>works?language=CSS"><span class="css smalltext">CSS </span> </a>
-<a href="<?php echo BASE_URL; ?>works?language=MySQL"><span class="mysql smalltext">MySQL </span> </a>
-<a href="<?php echo BASE_URL; ?>works?language=HTML"><span class="html smalltext">HTML</span> </a>
-<a href="<?php echo BASE_URL; ?>works?language=HTML5"><span class="html5 smalltext">HTML5 </span></a>
-<a href="<?php echo BASE_URL; ?>works?language=Processing.js"><span class="processing smallertext">Processing.js </span> </a>
--->
 <ul id="menu" style="width: 900px">
 <li class="menu-1-portfolio <?php if($page == "aboutme.php") echo "active" ?>" style="margin-left: 35px;">
 <a href="<?php echo BASE_URL; ?>aboutme">FBI</a>
@@ -512,11 +246,6 @@ function playmusic()
 <li class="menu-2-cv <?php if($page == "works.php") echo "active" ?>" style="margin-left: 35px;">
 <a href="<?php echo BASE_URL; ?>works">Projects</a>
 </li>
-<!--
-<li class="menu-3-articles <?php if($page == "social_network.php") echo "active" ?>">
-<a href="<?php echo BASE_URL; ?>social_network">SocialNetwork</a>
-</li>
--->
 <li class="<?php if($page == "games.php" || $page == "assembling_game/puzzle.php") echo "active" ?>" style="margin-left: 265px;">
 <a href="<?php echo BASE_URL; ?>games">Games</a>
 </li>
@@ -527,12 +256,89 @@ function playmusic()
 
 
 </div>
-</div>
-<div  style="position: absolute; top:0px; width: 100%; overflow: hidden;"><canvas id="pCanvas" data-processing-sources="boat/boat.pde"></canvas></div>
-</div>
-<div id="overlaysidebar">
-<!--<a href="<?php echo BASE_URL; ?>aboutme"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/case.png" style="margin-top:20px;"/></a>-->
-<!--<?php if($_SESSION["playedit"]) echo "true"; ?> -->
+
+</div> -->
+<!-- <div  style="position: absolute; top:0px; width: 100%; overflow: hidden;"><canvas id="pCanvas" data-processing-sources="boat/boat.pde"></canvas></div>
+</div> -->
+
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1 style="font-size: 30px">Ryan Dang</h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li title="Home">
+      	<a href="./">
+      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over"></i>
+      		<span class="menu-text">Home</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+
+      <li title="My Profile">
+      	<a href="aboutme">
+      		<i class="fa fa-user fa-3x"></i><i class="fa fa-user fa-3x icon-over"></i>
+      		<span class="menu-text">My Profile</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+
+      <li title="My Projects">
+      	<a href="works">
+      		<i class="fa fa-briefcase fa-3x"></i><i class="fa fa-briefcase fa-3x icon-over"></i>
+      		<span class="menu-text">My Projects</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+
+      <li title="My School Works">
+      	<a href="#">
+      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
+      		<span class="menu-text">My School Works</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+
+      <li title="My Games">
+      	<a href="games">
+      		<i class="fa fa-gamepad fa-3x"></i><i class="fa fa-gamepad fa-3x icon-over"></i>
+      		<span class="menu-text">My Games</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+    </ul>
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li title="Connect">
+      	<a href="#">
+      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
+      		<span class="menu-text">Connect With Me</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+      <li title="Contact">
+      	<a href="contact">
+      		<i class="fa fa-envelope fa-3x"></i><i class="fa fa-envelope fa-3x icon-over"></i>
+      		<span class="menu-text">Contact Me</span>
+      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      	</a>
+      </li>
+    </ul>
+  </section>
+  <span class="ribbon orange"><?php echo $today ?></span>
+</nav>
+
+
+
+
+
+<!-- <div id="overlaysidebar">
 <a href="<?php echo BASE_URL; ?>works"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/work.png" alt="work"/></a>
 <a href="<?php echo BASE_URL; ?>contact"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/email.png" alt="contact"/></a>
 <a href="<?php echo BASE_URL; ?>assembling_game/puzzle"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/puzzle.png" alt="puzzle"/></a>
@@ -546,9 +352,15 @@ function playmusic()
 <a href="<?php echo BASE_URL; ?>works?language=javascript"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/javascript.png" alt="javascript"/></a>
 <a href="<?php echo BASE_URL; ?>works?language=jquery"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/jquery.png" alt="jquery"/></a>
 <a href="<?php echo BASE_URL; ?>works?language=mysql"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/mysql.png" alt="mysql"/></a>
-<!--<span class="infopopup" style="position: relative;" alt="YAY"><img class="sidebaricon" src= "<?php echo BASE_URL; ?>images/puzzle_game.jpg" /></span>-->
-</div>
-<div id="sidebar">
-</div>
-<div class="row">
-<div id="rightpannel" style="<?php if($page == "social_network.php") echo "background: white"; else if ($page == "dealornodeal/dealornodeal.php") echo "overflow: visible";?> ">
+</div> -->
+
+<script>
+
+ $(document).foundation();
+
+</script>
+<!-- <div id="sidebar"> -->
+<!-- </div> -->
+
+
+<!-- <div id="rightpannel" style="<?php if($page == "social_network.php") echo "background: white"; else if ($page == "dealornodeal/dealornodeal.php") echo "overflow: visible";?> "> -->
