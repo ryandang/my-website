@@ -944,49 +944,16 @@ opacity: 0.7;
   height: 400px;
 }
 
-.floating_div
-{
-	position: absolute;
-	width: 890px;
-	min-width: 890px;
-	height: 600px;
-	top: 80px;
-	z-index: 20;
-	left: 0px;
-	display: none;
-	border: solid #108080 5px;
-	border-radius: 20px 20px 20px 20px;
-background-image: linear-gradient(bottom, rgb(33,33,36) 0%, rgb(123,148,148) 75%);
-background-image: -o-linear-gradient(bottom, rgb(33,33,36) 0%, rgb(123,148,148) 75%);
-background-image: -moz-linear-gradient(bottom, rgb(33,33,36) 0%, rgb(123,148,148) 75%);
-background-image: -webkit-linear-gradient(bottom, rgb(33,33,36) 0%, rgb(123,148,148) 75%);
-background-image: -ms-linear-gradient(bottom, rgb(33,33,36) 0%, rgb(123,148,148) 75%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0, rgb(33,33,36)),
-	color-stop(0.75, rgb(123,148,148))
-);
+#pieces {
+    margin-left: 30px;
 }
 
-.closeX
-{
-	float: right;
-	color: white;
-	font-size: 30px;
-	cursor: pointer;
-	display: none;
+#pieces img {
+    border: solid 1px white;
 }
-.closeX:hover
-{
-color:#108080;
-}
-#Xdiv
-{
-width: 890px;
-height: 40px;
+
+#pieces img, #complete img {
+    cursor: pointer;
 }
 
 .fbFeedbackPosts
@@ -1678,53 +1645,6 @@ top: 100px;
 border-radius: 18px;
 }
 
-.button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
-	box-shadow:inset 0px 1px 0px 0px #cae3fc;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #294f75) );
-	background:-moz-linear-gradient( center top, #79bbff 5%, #294f75 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#294f75');
-	background-color:#79bbff;
-	-webkit-border-top-left-radius:17px;
-	-moz-border-radius-topleft:17px;
-	border-top-left-radius:17px;
-	-webkit-border-top-right-radius:17px;
-	-moz-border-radius-topright:17px;
-	border-top-right-radius:17px;
-	-webkit-border-bottom-right-radius:17px;
-	-moz-border-radius-bottomright:17px;
-	border-bottom-right-radius:17px;
-	-webkit-border-bottom-left-radius:17px;
-	-moz-border-radius-bottomleft:17px;
-	border-bottom-left-radius:17px;
-	text-indent:0px;
-	border:1px solid #469df5;
-	display:inline-block;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	font-style:normal;
-	height:50px;
-	line-height:50px;
-	width:100px;
-	text-decoration:none;
-	text-align:center;
-	text-shadow:1px 1px 0px #287ace;
-}
-.button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #294f75), color-stop(1, #79bbff) );
-	background:-moz-linear-gradient( center top, #294f75 5%, #79bbff 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#294f75', endColorstr='#79bbff');
-	background-color:#294f75;
-	cursor: pointer;
-}.button:active {
-	position:relative;
-	top:1px;
-}
-
-
 .viewcount
 {
 	position: absolute;
@@ -1807,31 +1727,18 @@ display: none;
 #message {
 	text-align:center;
 	padding:20px;
-	width: 300px;
-	height: 250px;
+	width: 400px;
+	height: 300px;
 	position: absolute;
-	top: 250px;
+	top: 50px;
 	left: 300px;
-	font-size: 30px;
-	color:white;
+	font-size: 16px;
+	color: black;
+    background: url('../images/box-pikat.jpg');
 	z-index: 100;
 	border-radius: 10%;
-	box-shadow: 5px 5px 0px grey;
-background-image: linear-gradient(bottom, rgb(255,255,255) 13%, rgb(37,139,194) 79%);
-background-image: -o-linear-gradient(bottom, rgb(255,255,255) 13%, rgb(37,139,194) 79%);
-background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 13%, rgb(37,139,194) 79%);
-background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 13%, rgb(37,139,194) 79%);
-background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 13%, rgb(37,139,194) 79%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.13, rgb(255,255,255)),
-	color-stop(0.79, rgb(37,139,194))
-);
-border: solid 4px grey;
-display: none;
+    box-shadow: 1px 10px 10px #888888;
+    display: none;
 }
 /* About me */
 
@@ -1969,4 +1876,8 @@ display: none;
 
 .job-title {
     font-size: 20px;
+}
+
+.reveal-modal {
+    background: #ec8674;
 }

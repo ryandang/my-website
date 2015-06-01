@@ -1,3 +1,5 @@
+<div class="row">
+	<div class="medium-24 columns" id="work">
 <?php
 $x=0;
 $animatetime = -700;
@@ -58,3 +60,5 @@ HTML;
 		<a href="./volleyball"><img src="images/vball_icon.jpg" alt="" width="250" height="250"></a>
 	</div>
 	</div>
+	</div>
+</div>
