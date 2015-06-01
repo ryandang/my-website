@@ -107,9 +107,9 @@ $(document).ready(function() {
 	      </li>
 
 	      <li title="My School Works">
-	      	<a href="<?php echo BASE_URL; ?>#">
-	      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
-	      		<span class="menu-text">My School Works</span>
+	      	<a href="<?php echo BASE_URL; ?>school#">
+	      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over <?php if($page == "school.php") echo "active" ?>"></i>
+	      		<span class="menu-text <?php if($page == "school.php") echo "activeText" ?>">My School Works</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	      	</a>
 	      </li>
@@ -125,9 +125,9 @@ $(document).ready(function() {
 	    <!-- Right Nav Section -->
 	    <ul class="right">
 	      <li title="Connect">
-	      	<a href="<?php echo BASE_URL; ?>#">
-	      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
-	      		<span class="menu-text">Connect With Me</span>
+	      	<a href="<?php echo BASE_URL; ?>connect">
+	      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over <?php if($page == "connect.php") echo "active" ?>"></i>
+	      		<span class="menu-text <?php if($page == "connect.php") echo "activeText" ?>">Connect With Me</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	      	</a>
 	      </li>
