@@ -339,7 +339,7 @@ $today = date("M j");
 	      </li>
 
 	      <li title="My School Works">
-	      	<a href="<?php echo BASE_URL; ?>#">
+	      	<a href="<?php echo BASE_URL; ?>school">
 	      		<i class="fa fa-graduation-cap fa-3x"></i><i class="fa fa-graduation-cap fa-3x icon-over"></i>
 	      		<span class="menu-text">My School Works</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -357,7 +357,7 @@ $today = date("M j");
 	    <!-- Right Nav Section -->
 	    <ul class="right">
 	      <li title="Connect">
-	      	<a href="<?php echo BASE_URL; ?>#">
+	      	<a href="<?php echo BASE_URL; ?>connect">
 	      		<i class="fa fa-users fa-3x"></i><i class="fa fa-users fa-3x icon-over"></i>
 	      		<span class="menu-text">Connect With Me</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
