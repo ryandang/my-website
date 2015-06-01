@@ -4,36 +4,36 @@ $pid = $_REQUEST["pid"];
 
 $p = new Project($pid);
 $languagearray = json_decode($p->language);
-echo "<a href='works'><img id='back' src='images/back2.png' width='60px' height='60px' alt='back'/></a><h2 style='text-align: center; color: #EC8574'>" . $p->name . "</h2>";;
+echo "<a href='works' style='float: left'><img id='back' src='images/back2.png' width='60px' height='60px' alt='back'/></a><h2 style='text-align: center; color: #EC8574'>" . $p->name . "</h2>";;
 ?>
 
 <div id="wrapper">
         <div class="slider-wrapper theme-dark">
             <div id="slider" class="nivoSlider">
-			<?php 
-				
-				foreach (glob(dirname(__FILE__) . "/images/". $p->slides ."/*") as $filename) 
+			<?php
+
+				foreach (glob(dirname(__FILE__) . "/images/". $p->slides ."/*") as $filename)
 				{
 					$filename_array = (explode("images",$filename));
 					$filename = "images". $filename_array[1];
 					if(!strpos($filename,"thumbnail"))
 					echo "<img src='$filename' data-thumb='$filename' alt='Removed' />";
 				}
-				
-			?>	
+
+			?>
 			<!--
                 <img src="images/toystory.jpg" data-thumb="images/toystory.jpg" alt="" />
                 <a href="http://dev7studios.com"><img src="images/up.jpg" data-thumb="images/up.jpg" alt="" title="This is an example of a caption" /></a>
                 <img src="images/walle.jpg" data-thumb="images/walle.jpg" alt="" data-transition="slideInLeft" />
-                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />	
+                <img src="images/nemo.jpg" data-thumb="images/nemo.jpg" alt="" title="#htmlcaption" />
 			-->
             </div>
-            <div id="htmlcaption" class="nivo-html-caption">        
+            <div id="htmlcaption" class="nivo-html-caption">
             </div>
         </div>
 </div>
 
-<div style="position: relative; z-index: 100000"> 
+<div style="position: relative; z-index: 100000">
 <span style="color: #EC8574; font-size: 20px;">Languages and Tools used: </span> <br/>
 &nbsp;&nbsp;&nbsp;
 <?php
