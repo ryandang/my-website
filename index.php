@@ -10,7 +10,7 @@ $today = date("M j");
 	<meta property="fb:admins" content="1513364736"/>
 	<meta name="description" content="Ryan Dang Website. A personal website that provides more information about Ryan Dang - Web developer. Please contact me for more information">
 
-	<meta name="viewport" content="width=device-width">
+	<!-- <meta name="viewport" content="width=device-width"> -->
 
 	<meta name="keywords" content="Ryan Dang Web Developer proficient in PHP Ajax Jquery HTML5 HTML CSS MySql JavaScript JSON C C++ Java asp.net">
 	<title>Ryan Dang Porfolio</title>
@@ -139,7 +139,7 @@ $today = date("M j");
 			border-radius: 20px;
 		}
 
-		@media only screen and (max-width: 58.75em) {
+/*		@media only screen and (max-width: 58.75em) {
 			h1 {
 				font-size: 16px;
 			}
@@ -188,7 +188,7 @@ $today = date("M j");
 				margin-left: 10px;
 				border-radius: 20px;
 			}
-		}
+		}*/
 	</style>
 	<script>
 		function moveTo(position, accumulatedtime)
