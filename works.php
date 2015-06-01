@@ -1,3 +1,5 @@
+<div class="row">
+	<div class="medium-24 columns" id="work">
 <?php
 	if(isset($_REQUEST["pid"]))
 		$pid = $_REQUEST["pid"];
@@ -11,25 +13,25 @@ $(function(){
     'render_work.php',
     {
       pid: $pid
-    }, function(response) { $('#rightpannel').html(response) }
+    }, function(response) { $('#work').html(response) }
   );
 });
 </script>
 HTML;
 	}
-	
+
 	if(isset($_REQUEST["language"]))
 		{
 		$tmp = $_REQUEST["language"];
 		$language = " and project_language like '%$tmp%'";
 		$title = "<h1>Projects using: " . $tmp . "</h1>";
 		}
-	else 
+	else
 		{
 		$language = "";
 		$title ="<h1>All Projects</h1>";
 		}
-	
+
 ?>
 
 
@@ -47,7 +49,7 @@ while($r = mysql_fetch_assoc($result))
 	$x++;
 	$animatetime +=1000;
 	$p = new Project($r["project_id"]);
-	$name = $p->name;	
+	$name = $p->name;
 	$thumbnail = $p->thumbnail;
 	$pid = $p->id;
 
@@ -58,13 +60,13 @@ $(document).ready(function() {
 				$("#project$x").css("left", "200px");
 				$("#project$x").css("opacity", "0");
 				setTimeout(function(){
-					
+
 				    $("#project$x").animate({opacity: "1", left: "0px"},1000);
-				},$animatetime);	
+				},$animatetime);
 });
 </script>
 	<div id="project$x" class="project_container">
-	<div class="project_name" ><h2> $name </h2></div>
+	<div class="project_name" ><h2 style="font-size: 20px; color: #ec8674;"> $name </h2></div>
 	<div class='focus grow pic'>
 		<a href="works?pid=$pid"><img src='images/$thumbnail' alt=''  style="border: none"></a>
 	</div>
@@ -75,3 +77,5 @@ HTML;
 else
 echo "No projects found.";
 ?>
+	</div>
+</div>
