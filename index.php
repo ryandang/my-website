@@ -1,5 +1,6 @@
 <?php
 require_once 'functions/initialize.php';
+date_default_timezone_set('EST');
 $today = date("M j");
 ?>
 <!DOCTYPE html>
@@ -42,6 +43,16 @@ $today = date("M j");
 			font-size: 36px;
 		}
 
+		#footer
+		{
+		    width: 100%;
+		    height: 80px;
+		    background: #e73827;
+		    position: fixed;
+		    bottom: 0px;
+		    color: white;
+		}
+
 		.innerdiv {
 			width: 80%;
 			height: 600px;
@@ -61,7 +72,7 @@ $today = date("M j");
 			border-radius: 500px;
 			border: 2px solid #EC8574;
 			padding-right: 40px;
-			top: -300px;
+			top: -400px;
 			overflow: hidden;
 			-webkit-box-shadow: 17px 18px 5px 0px rgba(0,0,0,0.75);
 			-moz-box-shadow: 17px 18px 5px 0px rgba(0,0,0,0.75);
@@ -142,6 +153,7 @@ $today = date("M j");
 			.mycorner {
 				width: 450px;
 				height: 300px;
+				top: -250px;
 			}
 
 			.innerdiv {
@@ -292,8 +304,8 @@ $today = date("M j");
 
 	<nav class="top-bar" data-topbar role="navigation">
 	  <ul class="title-area">
-	    <li class="name">
-	      <h1 style="font-size: 30px">Ryan Dang</h1>
+	    <li class="name" style="text-align: center">
+	      <h1 style="font-family: Brush Script MT,cursive; font-size: 36px">Ryan Dang</h1>
 	    </li>
 	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 	    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
@@ -305,7 +317,7 @@ $today = date("M j");
 	      <li title="Home">
 	      	<a href="<?php echo BASE_URL; ?>./">
 	      		<i class="fa fa-home fa-3x"></i><i class="fa fa-home fa-3x icon-over active"></i>
-	      		<span class="menu-text">Home</span>
+	      		<span class="menu-text activeText">Home</span>
 	      		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	      	</a>
 	      </li>
@@ -462,6 +474,15 @@ $today = date("M j");
 						</ul>
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="footer">
+		<div class="row">
+			<div class="medium-14 medium-centered columns">
+			<br/>
+			<span >&copy; Ryan Dang 2015.<br/> All rights reserved.</span>
 			</div>
 		</div>
 	</div>

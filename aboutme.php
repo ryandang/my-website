@@ -1,346 +1,156 @@
-<?php
-/*
-$path = strtolower(trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
-if(preg_match('~^$~',$path,$m))
-	$display_page = ("index");
-echo $display_page;
-*/
-//echo $display_page;
-//echo "</br>123";
-//$path = strtolower(trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
+<div class="row">
+	<div class="medium-24 columns">
+		<h1>My Profile</h1>
+	</div>
 
-//$page = $display_page;
-//echo $path;
+	<div class="medium-24 columns">
+		<ul class="accordion my-profile" data-accordion>
+		  <li class="accordion-navigation active">
+		    <a href="#panel1a"><h3>Summary</h3></a>
+		    <div id="panel1a" class="content active">
+		    	<ul>
+		    		<li>An enthusiastic and self-motivated Web Developer with 3 years of experience in creating websites.</li>
+		    		<li>Proficient in Node, Angular, MongoDB, Mongoose, PHP, JavaScript, jQuery, Ajax, JSON, HTML, CSS, Processing and MySQL.</li>
+		    		<li>Knowledgeable in ASP.NET, C++, C, C#, Java, Shell Scripting and Perl.</li>
+		    		<li>Never cease to amaze the employers about what I can accomplish.</li>
+		    		<li>Has deep understanding in internet application architecture, design, data structures, algorithm design, problem solving, and complexity analsis.</li>
+		    		<li>Demonstrated the ability to communicate effectively in both technical and business environments.</li>
+		    		<li>A great team player and always take the initiative.</li>
+		    		<li>Demonstrated solid knowledge in understanding modern user experiences in web world.</li>
+		    		<li>Demonstrated technical excellence in software engineering throughout design, emplementation and testing.</li>
+		    	</ul>
+		    </div>
+		  </li>
 
-//if(preg_match('~^([a-z\-_/]*)'. "my_own" .'([a-z\-_/]*)$~',$path,$m))
-//echo $m[2];
-?>
+		  <li class="accordion-navigation">
+		    <a href="#panel2a"><h3>Work Experiences</h3></a>
+		    <div id="panel2a" class="content">
+		    	<b class="job-title">Web Developer</b><br/>
+				<b>Fivel System Coporation</b> <span style="float: right"><img src="images/fivel.png" /></span><br/>
+				<i>2014 - present</i>
+				<br/><br/>
+				<ul>
+					<li>Create the company email statistic page by using Angular.js, Node.js, Mongoose.js, Highcharts and Socket.io to display the data in real time.</li>
+					<li>Improve the existing video player by adding keyboard accessibility and implementing closed caption using popcorn.js and its libraries.</li>
+					<li>Suggest new ideas to bring more customers.</li>
+					<li>Implement various new features for the existing web application such as Tracking user Technologies, Gamification...</li>
+					<li>Contribute in converting the existing web app to fully use Angular.js.</li>
+					<li>Fix over 100 bugs and issues related to the existing system such as IE8 related issues, Log in modal pop up bug...</li>
+					<li>Contribute in making the existing web app to work on IE8.</li>
+					<li>Help passing web accessibility standard level AA.</li>
+				</ul>
+				<br/><br/>
+		    	<b class="job-title">Web Developer</b><br/>
+				<b>Trafic Duco Inc.</b> <span style="float: right"><img src="images/duco.png" /></span><br/>
+				<i>2012 - May 2014</i>
+				<br/><br/>
+				<ul>
+					<li>Created the company external website using WordPress to make it more appeal to new users</li>
+					<li>Improved the lay-out and user interface for the company internal website by using AJAX, jQuery, JavaScript, and CSS to make it easy and less time consuming for the users
+					<li>Fixed various bugs related to the system using PHP, MySQL, and AJAX.</li>
+					<li>Suggested new ideas to help improve the system and the Traffic Duco app performance.</li>
+					<li>Improved the existing search system to provide users with more search options.</li>
+					<li>Implemented various new features and functionality for the internal website which provide users with more powerful tools.</li>
+					<li>Modified the database to help reduce search time.</li>
+				</ul>
+				<br/><br/>
+		    	<b class="job-title">Web Developer</b><br/>
+				<b>Seneca College of Applied Arts and Technology</b> <span style="float: right"><img src="images/seneca.png" /></span><br/>
+				<i>Jan 2012 - August 2012</i>
+				<br/><br/>
+				<ul>
+					<li>Led Aviation Project to develop an online learning module to help pilot instructors from colleges across Ontario to standardize their way of grading students by using PHP, MySQL, HTML, CSS, jQuery, and JavaScript.</li>
+					<li>Led The Green Citizen Project to develop a website for an online course by using PHP, MySQL, HTML, CSS, jQuery, and JavaScript.</li>
+					<li>Assisted in SeneTech Project to help build an online learning resource that provides students with the tools to give them practical experiences by using Processing, PHP, MySQL, HTML, CSS, jQuery, and JavaScript. </li>
+					<li>Developed an online quiz for COAS department and an online French Assessment Test using HTML, jQuery, and JavaScript.</li>
+				</ul>
 
+			</div>
+		  </li>
 
+		  <li class="accordion-navigation">
+		    <a href="#panel3a"><h3>Education</h3></a>
+		    <div id="panel3a" class="content">
+				<b>Seneca College of Applied Arts and Technology</b> <span style="float: right"><img src="images/seneca.png" /></span><br/>
+				Bachelor Software Development<br/>
+				<i>2013 - 2015</i>
+				<br/><br/>
+				Grade: 3.6/4<br/>
 
-<script>
+				<ul>
+					<li>Awarded Renewable Scholarship - Bachelor of Technology year 2013</li>
+					<li>Awarded Renewable Scholarship - Bachelor of Technology year 2014</li>
+				</ul>
+				<br/>
 
-$(document).ready(function() {
-	$(".modal").show();
-$( window ).load(function() {
-	$(".modal").hide();
-var numberofitems = 3;
-var leftitems = numberofitems;
-var rightitems = 0;
-var index = 10001;
-        $("#rightfolder").flippy({
-            color_target: "#e6c45c",
-            direction: "right",
-            duration: "550",
-			onMidway: function(){
-				$("#rightfolder").css("z-index", "100");
-			},
+				<b>Seneca College of Applied Arts and Technology</b> <span style="float: right"><img src="images/seneca.png" /></span><br/>
+				Computer Programing Diploma<br/>
+				<i>2011 - 2013</i>
+				<br/><br/>
 
-			onFinish: function(){
-				$("#rightfolder").html('<div id="rightfolder2" ></div>');
-			},
+				Grade: 3.8/4<br/>
+				<ul>
+					<li>Winner of The AMSDELL scholarship</li>
+					<li>Graduated with honors in Computer Programmer</li>
+				</ul>
+				<br/>
 
-         });
+				<b>Humber College</b> <span style="float: right"><img src="images/humber2.jpg" /></span><br/>
+				Accounting Diploma<br/>
+				<i>2006 - 2010</i>
+				<br/>
 
-		$(".whitepaper").click(function(){
-			//alert("ASD");
-			if($(this).height() == 1200)
-			return;
-			$(this).css("z-index",index++);
-			$("#goleft2").hide();
-			$("#goright2").hide();
-			$(this).animate({
-			left: "-25px",
-			top: "-130px",
-			"font-size": "31px",
-			height: "1200px",
-			width:  "714px",
-			padding: "45px"
-			}, 500, function() {
-			// Animation complete.
-				$("#goleft").fadeIn();
-				$("#goright").fadeIn();
-				$(this).addClass("viewing");
-				$("#lefthand").show();
-				$("#righthand").show();
-			});
-		});
+				Grade: 3.2/4<br/><br/>
+				<br/>
+		    </div>
+		  </li>
 
+		  <li class="accordion-navigation">
+		    <a href="#panel4a"><h3>Certificate</h3></a>
+		    <div id="panel4a" class="content">
+				<img src="images/diploma.jpg" alt="diploma" width="100%" height="60%"/>
+			</div>
+		  </li>
 
-		$("#goleft").click(function(){
-				$("#lefthand").hide();
-				$("#righthand").hide();
-			$(".viewing").animate({
-			left: "0px",
-			top: "0px",
-			"font-size": "13px",
-			height: "510px",
-			width:  "300px",
-			padding: "20px"
-			}, 500, function() {
-			// Animation complete.
-				$("#goleft").fadeOut();
-				$("#goright").fadeOut();
-				$(this).removeClass("viewing");
-				$("#goleft2").fadeIn();
-				$("#goright2").fadeIn();
-				//$(this).css("z-index","10001");
-				$(this).next().addClass("topright");
-				$(".topleft").removeClass("topleft");
-				$(this).removeClass("topright");
-				$(this).addClass("topleft");
+		  <li class="accordion-navigation">
+		    <a href="#panel5a"><h3>Transcripts</h3></a>
+		    <div id="panel5a" class="content">
+		    	<img src="images/transcript.jpg" alt="diploma" width="100%" height="60%"/>
+		    </div>
+		  </li>
 
-			});
-
-
-
-			});
-
-		$("#goleft2").click(function(){
-			$(".topright").css("z-index",index++);
-			$(".topright").animate({
-			left: "0px",
-			top: "0px",
-			"font-size": "13px",
-			height: "510px",
-			width:  "300px",
-			padding: "20px"
-			}, 500, function() {
-			// Animation complete.
-				//$(this).css("z-index","10001");
-				$(this).next().addClass("topright");
-				$(".topleft").removeClass("topleft");
-				$(this).removeClass("topright");
-				$(this).addClass("topleft");
-
-			});
-
-		});
-		$("#goright").click(function(){
-				$("#lefthand").hide();
-				$("#righthand").hide();
-			$(".viewing").animate({
-			left: "420px",
-			top: "0px",
-			"font-size": "13px",
-			height: "510px",
-			width:  "300px",
-			padding: "20px"
-			}, 500, function() {
-			// Animation complete.
-				$("#goleft").fadeOut();
-				$("#goright").fadeOut();
-				$(this).removeClass("viewing");
-				//$(this).css("display","none");
-				//$("#rightfolder2").append('<div class="whitepaperR">'+ $(this).html() +'</div>');
-				//$(this).removeClass("whitepaperL");
-				//$(this).addClass("whitepaperR");
-				$("#goleft2").fadeIn();
-				$("#goright2").fadeIn();
-				//$(this).css("z-index","10001");
-				$(".topright").removeClass("topright");
-				$(this).removeClass("topleft");
-				$(this).addClass("topright");
-				$(this).prev().addClass("topleft");
-
-			});
-			});
-		$("#goright2").click(function(){
-			//alert(2);
-			$(".topleft").css("z-index",index++);
-			$(".topleft").animate({
-			left: "420px",
-			top: "0px",
-			"font-size": "13px",
-			height: "510px",
-			width:  "300px",
-			padding: "20px"
-			}, 500, function() {
-			// Animation complete.
-				//$(this).css("z-index","10001");
-				$(".topright").removeClass("topright");
-				$(this).removeClass("topleft");
-				$(this).addClass("topright");
-				$(this).prev().addClass("topleft");
-
-			});
-		});
-
-
-		//$("#rightpannel").css("over-flow", "show");
-		//$("#fbicontainer").css("width", "1600px");
-
-		//$("#fbicontainer").css("height", "1600px");
-});
-});
-
-
-</script>
-<h1>Ryan Dang's FBI Files!</h1>
-<br/><br/><br/>
-
-<script>
-/*
-$(document).ready(function() {
-	$("#desk").hide();
-	$("#mac").hide();
-
-		setTimeout(function(){
-		$("#desk").fadeIn();
-		$("#desk").animate({width: "400px"},1000);  //animate({fontSize: "70px"}, 500);
-		},2000);
-		setTimeout(function(){
-		$("#mac").fadeIn();
-		},4000);
-});
-*/
-</script>
-
-
-<!-- <div id="foldername" >
-<span id="recordname">Ryan Dang </span>
+		  <li class="accordion-navigation" style="border-bottom: none;">
+		    <a href="#panel6a" style="border-bottom: none"><h3>Volunteer and Other Activities</h3></a>
+		    <div id="panel6a" class="content" style="border-bottom: none;">
+		    	<b class="job-title">Support Staff</b><br/>
+				<b>Vietnamese Women's Association of Toronto</b> <span style="float: right"><img src="images/vn.jpg" /></span><br/>
+				<i>2012</i>
+				<br/><br/>
+				<ul>
+					<li>Helped organize and run the Lantern Festival.</li>
+					<li>Took care of two game tents. </li>
+				</ul>
+				<br/>
+				<b class="job-title">Support Staff</b><br/>
+				<b>United Way of Greater Toronto</b> <span style="float: right"><img src="images/united.png" /></span><br/>
+				<i>2012, 2013, 2014</i>
+				<br/><br/>
+				<ul>
+					<li>Helped with the CN Tower climb event.</li>
+				</ul>
+				<br/>
+				<b class="job-title">Volunteer Staff</b><br/>
+				<b>Seneca College</b> <span style="float: right"><img src="images/seneca.png" /></span><br/>
+				<i>2012, 2013, 2014</i>
+				<br/><br/>
+				<ul>
+					<li>Helped with Seneca college open house event 2012, 2013, 2014.</li>
+					<li>Helped with preparing and setting up for Seneca Tedx event 2012.</li>
+					<li>Helped recording video at Seneca FSOSS event 2014.</li>
+				</ul>
+				<br/><br/>
+		    </div>
+		  </li>
+		</ul>
+	</div>
 </div>
-
-
-<div id="leftfolder" >
-<div class="whitepaper">
-	<span class="folded-corner"></span>
-	To be added
-</div>
-<div class="whitepaper">
-	<span class="folded-corner"></span>
-	-Ryan loves to sing. He always sings in the car!<br/> However he is a terrible singer!. <br/><br/>
-</div>
-<div class="whitepaper" style="background: #8f8f87">
-<div class="note2">Ryan Dang's<br/> Top Secret<br/> Files! </div>
-</div>
-
-
-<div class="whitepaper">
-<span class="folded-corner"></span>
-	<div class="note">Reference Letter </div>
-	<img src="images/ref.png" alt="reference" width="100%" height="60%"/>
-
-</div>
-<div class="whitepaper">
-<span class="folded-corner"></span>
-	<div class="note">Transcript </div>
-	<img src="images/transcript.jpg" alt="diploma" width="100%" height="60%"/>
-
-</div>
-<div class="whitepaper">
-<span class="folded-corner"></span>
-	<div class="note">Certificate </div>
-	<img src="images/diploma.jpg" alt="diploma" width="100%" height="60%"/>
-
-</div>
-<div class="whitepaper">
-<span class="folded-corner"></span>
-	<div class="note">Education(con't) </div>
-<b>Humber College</b><br/>
-Business Administration-Accounting Diploma<br/><br/>
-2006 - 2010 <br/>
-</div>
-<div class="whitepaper">
-<span class="folded-corner"></span>
-	<div class="note">Education </div>
-
-<b>Seneca College of Applied Arts and<br/> Technology</b><br/>
-Bachelor Software Development<br/><br/>
-
-2013 - 2015<br/><br/>
-
-Grade: 3.6/4GPA<br/><br/>
-
-- Awarded Renewable Scholarship - Bachelor of Technology year 2013<br/>
-<br/><br/>
-
-<b>Seneca College of Applied Arts and<br/> Technology</b><br/>
-Computer Programing Diploma<br/><br/>
-
-2011 - 2013<br/><br/>
-
-Grade: 3.8/4GPA<br/><br/>
-
-- Winner of The AMSDELL scholarship<br/>
-- Graduated with honors in Computer Programmer<br/><br/><br/>
-</div>
-<div class="whitepaper">
-<span class="folded-corner"></span>
-	<div class="note">Works</div>
-<b>Web Developer</b><br/>
-Fivel Inc.<br/>
-December 2014 - present <br/><br/>
-
-<b>Web Developer</b><br/>
-Traffic Duco Inc.<br/>
-December 2012 - 2013 <br/><br/>
-
-
-<b>Web Developer</b><br/>
-Seneca College of Applied Arts and Technology<br/>
-January 2012 - August 2012<br/><br/>
-
-
-<b>Shift Manager</b><br/>
-McDonald's Corporation<br/>
-May 2008 - September 2009<br/><br/>
-
-
-<b>Tax Preparer</b><br/>
-Liberty Tax<br/>
-February 2008 - April 2008
-</div>
-<div class="whitepaper">
-	<span class="folded-corner"></span>
-	<div class="note">Summary(con't) </div>
-	- A great team player.
-	<br/><br/>
-	- Always take the initiative.
-	<br/><br/>
-	- Demonstrated solid knowledge in understanding modern
-	user experiences in web world.
-	<br/><br/>
-	- Demonstrated technical excellence in software<br/> engineering throughout design, emplementation <br/>and testing.
-
-
-</div>
-
-<div class="whitepaper topleft">
-	<div class="note">Summary </div>
-
-
-	<span class="folded-corner"></span>
-- An enthusiastic and self-motivated Web <br/>Developer with 3 years of experience in creating websites.<br/><br/>- Proficient in Node, Angular, MongoDB, Mongoose, PHP, JavaScript, jQuery, Ajax, JSON, HTML, <br/> CSS, Processing and MySQL.<br/><br/>
-- Knowledgeable in ASP.NET, C++, C, C#,<br/> Java, Shell Scripting and Perl.
-<br/><br/>
-
-- Has always  been a hardworking employee.
-<br/><br/>- Never cease to amaze his employers about <br/>what he can accomplish.
-
-<br/><br/>
-	- Has deep understanding in internet <br/>application architecture, design, data structures,<br/>algorithm design, problem solving, and <br/>complexity analsis.
-<br/><br/>
-	- Demonstrated the ability to communicate<br/> effectively in both technical and business<br/> environments.
-<br/><br/>
-
-</div>
-
-</div>
-
-<div id="middlefolder" >
-
-</div>
-<div id="rightfolder" >
-
-</div>
-
-<img id="goleft" alt="goleft" src="images/back.png" width="40" height="40" class="transform1 languageimage" style="position: relative; left: -447px; top: 200px; z-index: 20000;display: none; cursor: pointer"/>
-<img id="goleft2" alt="goleft2" src="images/goleft.png" width="40" height="40" class="languageimage" style="position: absolute; left: 505px; top: 650px; z-index: 20000; cursor: pointer"/>
-<img id="goright" alt="goright" src="images/right.png" width="40" height="40" class="transform2 languageimage" style="position: relative; left: 310px; top: 200px; z-index: 20000; display: none; cursor: pointer"/>
-<img id="goright2" alt="goright2" src="images/goright.png" width="40" height="40" class="languageimage" style="position: absolute; left: 390px; top: 200px; z-index: 20000; cursor: pointer"/>
-<img id="lefthand" alt="lefthand" src="images/lefthand.png" />
-<img id="righthand" alt="righthand" src="images/righthand.png" /> -->
-
-
-
